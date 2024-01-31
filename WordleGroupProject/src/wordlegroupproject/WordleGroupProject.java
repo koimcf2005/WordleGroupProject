@@ -7,10 +7,15 @@ package wordlegroupproject;
  * @author Andrew Burbage
  * @author Kayla Dixon
  * @author Pasquale Concilio
+ * @author Andrew Taylor ?
  */
 public class WordleGroupProject {
     public static void main(String[] args) {
         
+        // Creating an instance of the window
+        Window window = new Window();
+        
+        // Populate the window with buttons
+        window.createButtons();
     }
-    
 }
