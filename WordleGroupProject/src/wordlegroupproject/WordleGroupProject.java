@@ -14,8 +14,6 @@ public class WordleGroupProject {
         
         // Creating an instance of the window
         Window window = new Window();
-        
-        // Populate the window with buttons
-        window.createButtons();
+
     }
 }
