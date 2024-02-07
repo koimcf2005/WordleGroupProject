@@ -22,8 +22,16 @@ public class InputButton extends JButton {
         setFocusable(false);
         setBackground(new Color(129, 131, 132));
         setBorder(null);
-        setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
+        setFont(new Font(Font.SANS_SERIF, Font.BOLD, 25));
         setForeground(Color.WHITE);
+    }
+    
+    public void setAsGrey() {
+        setBackground(new Color(58, 58, 60));
+    }
+    
+    public void setAsNormal() {
+        setBackground(new Color(129, 131, 132));
     }
     
     public char getLetter() {

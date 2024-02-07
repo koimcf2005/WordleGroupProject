@@ -73,14 +73,15 @@ public class Keyboard {
         mButtonList.add(new InputButton('\b', listener));
         window.add(mButtonList.get(26));
         mButtonList.get(26).setText("Delete");
-        mButtonList.get(26).setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
+        mButtonList.get(26).setFont(new Font(Font.SANS_SERIF, Font.BOLD, 15));
+
         mButtonList.get(26).setBounds(420, 612, 65, 58);
         
         // Adds the enter button which has a placeholder value of ' '
         mButtonList.add(new InputButton(' ', listener));
         window.add(mButtonList.get(27));
         mButtonList.get(27).setText("Enter");
-        mButtonList.get(27).setFont(new Font("Comic Sans MS", Font.PLAIN, 15));
+        mButtonList.get(27).setFont(new Font(Font.SANS_SERIF, Font.BOLD, 15));
         mButtonList.get(27).setBounds(20, 612, 65, 58);
     }
     

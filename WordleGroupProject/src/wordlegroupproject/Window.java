@@ -8,12 +8,11 @@ import javax.swing.JFrame;
 /**
  * @author koimc
  */
-public class Window extends JFrame implements ActionListener{
+public class Window extends JFrame implements ActionListener {
         
     // Member variables
     private final Keyboard mKeyboard;
-    private String mWord = "";
-
+    private final WordGrid mGrid;    
     
     // Constructor
     public Window() {
@@ -23,14 +22,23 @@ public class Window extends JFrame implements ActionListener{
         getContentPane().setBackground(new Color(18, 18, 19));
         setResizable(false);
         setLayout(null);
-        setSize(530, 750);
+        setSize(530, 735);
         setVisible(true);
         
-        // This will not always be in the constructor
+        // Creates the keyboard
         mKeyboard = new Keyboard(this, this);
         mKeyboard.createButtons();
+        
+        // Creates the word grid
+        mGrid = new WordGrid(7, 5, this);
+        add(mGrid);
+        mGrid.setBounds(95, 15, 320, 450);
+
     }
 
+    public Keyboard getKeyboard() { return mKeyboard; }
+    public WordGrid getGrid() { return mGrid; }
+    
     @Override
     // actionPerformed runs any time any button is pressed
     // It is up to the programmer to figure out what button was pressed
@@ -48,12 +56,7 @@ public class Window extends JFrame implements ActionListener{
         
         // Make sure that this button is not null
         if (usedButton != null) {
-            
-            // TODO: add real functionality later
-            
-            // Just testing to make sure it works
-            mWord += usedButton.getLetter();
-            System.out.println(mWord);
+            WordleGroupProject.getInput(usedButton);
         }
     }
 }
