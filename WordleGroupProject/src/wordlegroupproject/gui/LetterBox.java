@@ -1,4 +1,4 @@
-package wordlegroupproject;
+package wordlegroupproject.gui;
 
 import java.awt.Color;
 import java.awt.Font;

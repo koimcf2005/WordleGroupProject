@@ -1,5 +1,8 @@
 package wordlegroupproject;
 
+import wordlegroupproject.gui.InputButton;
+import wordlegroupproject.gui.Window;
+
 /**
  * This is the main class
  * 
