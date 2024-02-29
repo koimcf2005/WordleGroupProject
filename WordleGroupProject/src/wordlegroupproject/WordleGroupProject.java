@@ -9,8 +9,6 @@ import wordlegroupproject.gui.Window;
  * @author Koi McFarland
  * @author Andrew Burbage
  * @author Kayla Dixon
- * @author Pasquale Concilio
- * @author Andrew Taylor ?
  */
 public class WordleGroupProject {
     // Temp variable
