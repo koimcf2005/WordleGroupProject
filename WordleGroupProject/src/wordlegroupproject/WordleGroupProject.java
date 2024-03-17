@@ -20,11 +20,11 @@ public class WordleGroupProject {
          * Window has two different parts, the grid and the keyboard.
          * 
          * You can change aspects of the grid in the following ways:
-         *      window.getGrid().getBoxFromIndex(index).setAsCorrectLetter();
-         *      window.getGrid().getBoxFromIndex(index).setAsEmpty();
-         *      window.getGrid().getBoxFromIndex(index).setAsIncorrectLetter();
-         *      window.getGrid().getBoxFromIndex(index).setAsWrongSpot();
-         *      window.getGrid().getBoxFromIndex(index).setLetter('char');
+         *      window.getGrid().getBox(row, column).setAsCorrectLetter();
+         *      window.getGrid().getBox(row, column).setAsEmpty();
+         *      window.getGrid().getBox(row, column).setAsIncorrectLetter();
+         *      window.getGrid().getBox(row, column).setAsWrongSpot();
+         *      window.getGrid().getBox(row, column).setLetter('char');
          *      window.getGrid().hide();
          *      window.getGrid().show();
          * 
@@ -38,6 +38,7 @@ public class WordleGroupProject {
          *      window.getKeyboard().show();
          */
         Window window = new Window();
+        window.getGrid().getBox(0, 0).setAsEmpty();
         
         // TODO: Any functionality
     }
@@ -53,5 +54,7 @@ public class WordleGroupProject {
         // Just testing to make sure it works
         mWord += input.getLetter();
         System.out.println(mWord);
+        
+        
     }
 }

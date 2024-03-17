@@ -21,9 +21,9 @@ public class WordGrid extends JPanel {
         this.wordLength = wordLength;
         this.guessCount = guessCount;
         this.window = window;
-        
+                
         // Sets the grid layout default settings
-        GridLayout layout = new GridLayout(wordLength, guessCount);
+        GridLayout layout = new GridLayout(guessCount, wordLength);
         layout.setHgap(5);
         layout.setVgap(5);
         
@@ -32,22 +32,33 @@ public class WordGrid extends JPanel {
         setBackground(new Color(0, 0, 0, 0));
   
         // Creates the boxes
-        for (int i = 0; i < wordLength; i++) {
-            for (int j = 0; j < guessCount; j++) {
+        for (int i = 0; i < guessCount; i++) {
+            for (int j = 0; j < wordLength; j++) {
                 LetterBox newBox = new LetterBox();
-                newBox.setSize(new Dimension(10, 10));
+                newBox.setSize(new Dimension(60, 60));
                 mGrid.add(newBox);
                 add(newBox);
             }
         }
     }
     
-    public LetterBox getBoxFromIndex(int index) {
+    public void calculateBounds(int wordLength, int guessCount) {
+        int X = 30 + (Math.abs(wordLength - 7) * 33);
+        int Y = 15;
+        int W = (60 * wordLength) + (5 * (wordLength - 1));
+        int H = (60 * guessCount) + (5 * (guessCount - 1));
+        
+        setBounds(X, Y, W, H);
+    }
+    
+    public LetterBox getBox(int row, int column) {
         LetterBox retBox = null;
-        if (index < mGrid.size()) {
-            retBox = mGrid.get(index);
-        }
-        return retBox;
+        int index = (row * wordLength) + column;
+        
+        if (row > guessCount - 1 || column > wordLength - 1)
+            return null;
+        else
+            return mGrid.get(index);
     }
     
     @Override

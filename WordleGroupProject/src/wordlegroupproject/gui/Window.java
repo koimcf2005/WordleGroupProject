@@ -31,9 +31,10 @@ public class Window extends JFrame implements ActionListener {
         mKeyboard.createButtons();
         
         // Creates the word grid
-        mGrid = new WordGrid(7, 5, this);
+        mGrid = new WordGrid(7, 7, this);
+        mGrid.calculateBounds(7, 7);
         add(mGrid);
-        mGrid.setBounds(95, 15, 320, 450);
+        
 
     }
 
