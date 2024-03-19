@@ -37,8 +37,28 @@ public class WordleGroupProject {
          *      window.getKeyboard().hide();
          *      window.getKeyboard().show();
          */
+        
+        // Instantiates the window
         Window window = new Window();
-        window.getGrid().getBox(0, 0).setAsEmpty();
+        
+        // Creates the keyboard and shows it
+        window.createKeyboard();
+        window.getKeyboard().show();
+        
+        // Creates the grid and shows it
+        // To resize the grid simply do this again with different values
+        window.createGrid(5, 7);
+        window.getGrid().show();
+        
+        // Examples of changing letter boxes
+        window.getGrid().getBox(0, 0).setAsCorrectLetter();
+        window.getGrid().getBox(0, 0).setLetter('A');
+        
+        window.getGrid().getBox(0, 1).setAsWrongSpot();
+        window.getGrid().getBox(0, 1).setLetter('B');
+        
+        window.getGrid().getBox(0, 2).setAsIncorrectLetter();
+        window.getGrid().getBox(0, 2).setLetter('C');
         
         // TODO: Any functionality
     }
@@ -54,7 +74,5 @@ public class WordleGroupProject {
         // Just testing to make sure it works
         mWord += input.getLetter();
         System.out.println(mWord);
-        
-        
     }
 }

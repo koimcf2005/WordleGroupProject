@@ -43,7 +43,7 @@ public class WordGrid extends JPanel {
     }
     
     public void calculateBounds(int wordLength, int guessCount) {
-        int X = 30 + (Math.abs(wordLength - 7) * 33);
+        int X = 30 + (7 - wordLength) * 33;
         int Y = 15;
         int W = (60 * wordLength) + (5 * (wordLength - 1));
         int H = (60 * guessCount) + (5 * (guessCount - 1));

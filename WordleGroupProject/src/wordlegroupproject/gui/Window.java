@@ -12,8 +12,8 @@ import wordlegroupproject.WordleGroupProject;
 public class Window extends JFrame implements ActionListener {
         
     // Member variables
-    private final Keyboard mKeyboard;
-    private final WordGrid mGrid;    
+    private Keyboard mKeyboard;
+    private WordGrid mGrid;    
     
     // Constructor
     public Window() {
@@ -25,19 +25,24 @@ public class Window extends JFrame implements ActionListener {
         setLayout(null);
         setSize(530, 735);
         setVisible(true);
-        
+    }
+
+    public void createKeyboard() {
         // Creates the keyboard
         mKeyboard = new Keyboard(this, this);
         mKeyboard.createButtons();
-        
-        // Creates the word grid
-        mGrid = new WordGrid(7, 7, this);
-        mGrid.calculateBounds(7, 7);
-        add(mGrid);
-        
-
+        mKeyboard.hide();
     }
-
+    
+    public void createGrid(int wordLength, int guessCount) {
+        // Creates the word grid
+        mGrid = new WordGrid(wordLength, guessCount, this);
+        mGrid.calculateBounds(wordLength, guessCount);
+        mGrid.getBox(0, 0).setAsEmpty();
+        add(mGrid);
+        mGrid.hide();
+    }
+    
     public Keyboard getKeyboard() { return mKeyboard; }
     public WordGrid getGrid() { return mGrid; }
     
