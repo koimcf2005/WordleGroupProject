@@ -1,5 +1,6 @@
 package wordlegroupproject;
 
+import javax.swing.JButton;
 import wordlegroupproject.gui.InputButton;
 import wordlegroupproject.gui.Window;
 
@@ -13,12 +14,14 @@ import wordlegroupproject.gui.Window;
 public class WordleGroupProject {
     // Temp variable
     private static String mWord = "";
+    private static Window mWindow;
+    
+    private static int wordLength = 5;
+    private static int guessCount = 7;
     
     public static void main(String[] args) {
         
         /**
-         * Window has two different parts, the grid and the keyboard.
-         * 
          * You can change aspects of the grid in the following ways:
          *      window.getGrid().getBox(row, column).setAsCorrectLetter();
          *      window.getGrid().getBox(row, column).setAsEmpty();
@@ -36,43 +39,61 @@ public class WordleGroupProject {
          *      window.getKeyboard().getButtonByText(string).setAsNormal();
          *      window.getKeyboard().hide();
          *      window.getKeyboard().show();
+         * 
+         * IMPORTANT NOTE: the grid is not created in main unlike other elements
+         *      If you want to use the grid, check if it is null first!
          */
         
-        // Instantiates the window
-        Window window = new Window();
+        // Instantiates the window and creates the keyboard and start menu
+        mWindow = new Window();
+        mWindow.createKeyboard();
         
-        // Creates the keyboard and shows it
-        window.createKeyboard();
-        window.getKeyboard().show();
-        
-        // Creates the grid and shows it
-        // To resize the grid simply do this again with different values
-        window.createGrid(5, 7);
-        window.getGrid().show();
-        
-        // Examples of changing letter boxes
-        window.getGrid().getBox(0, 0).setAsCorrectLetter();
-        window.getGrid().getBox(0, 0).setLetter('A');
-        
-        window.getGrid().getBox(0, 1).setAsWrongSpot();
-        window.getGrid().getBox(0, 1).setLetter('B');
-        
-        window.getGrid().getBox(0, 2).setAsIncorrectLetter();
-        window.getGrid().getBox(0, 2).setLetter('C');
-        
+        mWindow.createSettings();
+        mWindow.getSettings().show();
+
         // TODO: Any functionality
     }
     
    /**
     * This function gets all input from the Window class.
-    * @param input The InputButton that has been clicked
+    * @param key The InputButton that has been clicked
     * @author Koi McFarland
     */
-    public static void getInput(InputButton input) {
+    public static void getKeyboardInput(InputButton key) {
         // TODO: add real functionality
 
         // Just testing to make sure it works
-        mWord += input.getLetter();
+        mWord += key.getLetter();
         System.out.println(mWord);
     }
+    
+    public static void getSettingsInput(JButton input) {
+        if (input.equals(mWindow.getSettings().getWordLengthButton0()))
+            wordLength -= 1;
+        else if (input.equals(mWindow.getSettings().getWordLengthButton1()))
+            wordLength += 1;
+        else if (input.equals(mWindow.getSettings().getGuessCountButton0()))
+            guessCount -= 1;
+        else if (input.equals(mWindow.getSettings().getGuessCountButton1()))
+            guessCount += 1;
+        else if (input.equals(mWindow.getSettings().getStartButton())) {
+            
+            // This is where the game starts
+            // Creates the grid and reveals the keyboard
+            mWindow.createGrid(wordLength, guessCount);
+            mWindow.getGrid().show();
+            mWindow.getKeyboard().show();
+            mWindow.getSettings().hide();
+
+        }
+        
+        if (wordLength > 7) wordLength = 7;
+        else if (wordLength < 3) wordLength = 3;
+        if (guessCount > 7) guessCount = 7;
+        else if (guessCount < 3) guessCount = 3;
+        
+        mWindow.getSettings().setWordLengthLabel(wordLength);
+        mWindow.getSettings().setGuessCountLabel(guessCount);
+    }
+    
 }
