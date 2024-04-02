@@ -13,7 +13,6 @@ import wordlegroupproject.gui.Window;
  */
 public class WordleGroupProject {
     // Temp variable
-    private static String mWord = "";
     private static Window mWindow;
     
     private static int wordLength = 5;
@@ -44,7 +43,7 @@ public class WordleGroupProject {
          *      If you want to use the grid, check if it is null first!
          */
         
-        // Instantiates the window and creates the keyboard and start menu
+        // Instantiates the window and creates the keyboard / start screen
         mWindow = new Window();
         mWindow.createKeyboard();
         
@@ -60,11 +59,17 @@ public class WordleGroupProject {
     * @author Koi McFarland
     */
     public static void getKeyboardInput(InputButton key) {
-        // TODO: add real functionality
-
-        // Just testing to make sure it works
-        mWord += key.getLetter();
-        System.out.println(mWord);
+        switch (key.getLetter()) {
+            case ' ' -> { // Enter key
+                System.out.println("Enter was pressed");
+            }
+            case '\b' -> { // Delete key
+                System.out.println("Delete was pressed");
+            }
+            default -> { // Letter key
+                System.out.println(key.getLetter() + " was pressed");
+            }
+        }
     }
     
     public static void getSettingsInput(JButton input) {
@@ -84,7 +89,6 @@ public class WordleGroupProject {
             mWindow.getGrid().show();
             mWindow.getKeyboard().show();
             mWindow.getSettings().hide();
-
         }
         
         if (wordLength > 7) wordLength = 7;
@@ -95,5 +99,4 @@ public class WordleGroupProject {
         mWindow.getSettings().setWordLengthLabel(wordLength);
         mWindow.getSettings().setGuessCountLabel(guessCount);
     }
-    
 }
