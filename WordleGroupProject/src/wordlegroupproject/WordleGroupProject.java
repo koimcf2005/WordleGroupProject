@@ -22,22 +22,24 @@ public class WordleGroupProject {
         
         /**
          * You can change aspects of the grid in the following ways:
-         *      window.getGrid().getBox(row, column).setAsCorrectLetter();
-         *      window.getGrid().getBox(row, column).setAsEmpty();
-         *      window.getGrid().getBox(row, column).setAsIncorrectLetter();
-         *      window.getGrid().getBox(row, column).setAsWrongSpot();
-         *      window.getGrid().getBox(row, column).setLetter('char');
-         *      window.getGrid().hide();
-         *      window.getGrid().show();
+         *      mWindow.getGrid().getBox(row, column).setAsCorrectLetter();
+         *      mWindow.getGrid().getBox(row, column).setAsEmpty();
+         *      mWindow.getGrid().getBox(row, column).setAsIncorrectLetter();
+         *      mWindow.getGrid().getBox(row, column).setAsWrongSpot();
+         *      mWindow.getGrid().getBox(row, column).setLetter('char');
+         *      mWindow.getGrid().getWordLength();
+         *      mWindow.getGrid().getGuessCount();
+         *      mWindow.getGrid().hide();
+         *      mWindow.getGrid().show();
          * 
          * You can use aspects of the keyboard in the following ways:
-         *      window.getKeyboard().getButtonCount();
-         *      window.getKeyboard().getButtonByIndex(index);
-         *      window.getKeyboard().getButtonByText(string);
-         *      window.getKeyboard().getButtonByText(string).setAsGrey();
-         *      window.getKeyboard().getButtonByText(string).setAsNormal();
-         *      window.getKeyboard().hide();
-         *      window.getKeyboard().show();
+         *      mWindow.getKeyboard().getButtonCount();
+         *      mWindow.getKeyboard().getButtonByIndex(index);
+         *      mWindow.getKeyboard().getButtonByText(string);
+         *      mWindow.getKeyboard().getButtonByText(string).setAsGrey();
+         *      mWindow.getKeyboard().getButtonByText(string).setAsNormal();
+         *      mWindow.getKeyboard().hide();
+         *      mWindow.getKeyboard().show();
          * 
          * IMPORTANT NOTE: the grid is not created in main unlike other elements
          *      If you want to use the grid, check if it is null first!

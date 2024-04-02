@@ -74,5 +74,12 @@ public class WordGrid extends JPanel {
             mGrid.get(box).setVisible(true);
         }
     }
-    
+
+    public int getWordLength() {
+        return wordLength;
+    }
+
+    public int getGuessCount() {
+        return guessCount;
+    }
 }
