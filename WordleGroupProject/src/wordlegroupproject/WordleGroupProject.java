@@ -1,5 +1,6 @@
 package wordlegroupproject;
 
+import WordSelection.WordSelection;
 import javax.swing.JButton;
 import wordlegroupproject.gui.InputButton;
 import wordlegroupproject.gui.Window;
@@ -53,6 +54,9 @@ public class WordleGroupProject {
         mWindow.getSettings().show();
 
         // TODO: Any functionality
+        WordSelection wordSelect = new WordSelection();
+        wordSelect.listExtraction();
+        
     }
     
    /**
