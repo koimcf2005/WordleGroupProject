@@ -51,6 +51,9 @@ public class WordleGroupProject {
         mWindow.createKeyboard();
         
         mWindow.createSettings();
+        mWindow.getSettings();
+        
+        mWindow.getKeyboard().hide();
         mWindow.getSettings().show();
 
         // TODO: Any functionality
