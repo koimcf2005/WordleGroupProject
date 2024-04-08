@@ -30,14 +30,12 @@ public class Window extends JFrame implements ActionListener {
 
     public void createSettings() {
         mSettings = new Settings(this, this);
-        mSettings.hide();
     }
     
     public void createKeyboard() {
         // Creates the keyboard
         mKeyboard = new Keyboard(this, this);
         mKeyboard.createButtons();
-        mKeyboard.hide();
     }
     
     public void createGrid(int wordLength, int guessCount) {
@@ -45,7 +43,6 @@ public class Window extends JFrame implements ActionListener {
         mGrid = new WordGrid(wordLength, guessCount, this);
         mGrid.calculateBounds(wordLength, guessCount);
         add(mGrid);
-        mGrid.hide();
     }
     
     public Keyboard getKeyboard() { return mKeyboard; }
