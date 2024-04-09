@@ -20,6 +20,8 @@ public class WordleGroupProject {
     private static int wordLength = 5;
     private static int guessCount = 7;
     
+    private static String selectedWord;
+    
     public static void main(String[] args) {
         
         /**
@@ -99,7 +101,6 @@ public class WordleGroupProject {
             mWindow.getGrid().show();
             mWindow.getKeyboard().show();
             mWindow.getSettings().hide();
-            String selectedWord;
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
         }
