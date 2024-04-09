@@ -35,96 +35,69 @@ public class WordSelection {
         Scanner fileScanner5;
         
         try {
-            // load data from file 1
+            // load data from files
             String threeWord = System.getProperty("user.dir");
             fileInStream1 = new FileInputStream (threeWord 
                     + "\\src\\WordSelection\\3-LetterWords.txt");
-            System.out.println("Opened file one");
+            //System.out.println("Opened file one");
             fileScanner1 = new Scanner(fileInStream1);
             
             String fourWord = System.getProperty("user.dir");
             fileInStream2 = new FileInputStream (fourWord 
                     + "\\src\\WordSelection\\4-LetterWords.txt");
-            System.out.println("Opened file two");
+            //System.out.println("Opened file two");
             fileScanner2 = new Scanner(fileInStream2);
             
             String fiveWord = System.getProperty("user.dir");
             fileInStream3 = new FileInputStream (fiveWord 
                     + "\\src\\WordSelection\\5-LetterWords.txt");
-            System.out.println("Opened file three");
+            //System.out.println("Opened file three");
             fileScanner3 = new Scanner(fileInStream3);
             
             String sixWord = System.getProperty("user.dir");
             fileInStream4 = new FileInputStream (sixWord 
                     + "\\src\\WordSelection\\6-LetterWords.txt");
-            System.out.println("Opened file four");
+            //System.out.println("Opened file four");
             fileScanner4 = new Scanner(fileInStream4);
             
             String sevenWord = System.getProperty("user.dir");
             fileInStream5 = new FileInputStream (sevenWord 
                     + "\\src\\WordSelection\\7-LetterWords.txt");
-            System.out.println("Opened file five");
+            //System.out.println("Opened file five");
             fileScanner5 = new Scanner(fileInStream5);
 
-            //read entire line as string for each file
-            String line1 = fileScanner1.nextLine();
-            //String line2 = bf2.readLine();
-            //String line3 = bf3.readLine();
-            //String line4 = bf4.readLine();
-            //String line5 = bf5.readLine();
-
-            // checking for end of files
-            while (line1 != null) {
-                threeLetterWords.add(line1);
-                line1 = fileScanner1.nextLine();
+            // checking for end of files and putting them in their arrays
+            while (fileScanner1.hasNextLine()) {
+                threeLetterWords.add(fileScanner1.nextLine());
+            }
+            
+            while (fileScanner2.hasNextLine()) {
+                fourLetterWords.add(fileScanner2.nextLine());
             }
 
-//            while (line2 != null) {
-//                fourLetterWords.add(line2);
-//                line2 = bf2.readLine();
-//            }
-//
-//            while (line3 != null) {
-//                fiveLetterWords.add(line3);
-//                line3 = bf3.readLine();
-//            }
-//
-//            while (line4 != null) {
-//                sixLetterWords.add(line4);
-//                line4 = bf4.readLine();
-//            }
-//
-//            while (line5 != null) {
-//                sevenLetterWords.add(line5);
-//                line5 = bf5.readLine();
-//            }
-            
-            
-
-//            // closing bufferreader objects
-//            bf1.close();
-//            bf2.close();
-//            bf3.close();
-//            bf4.close();
-//            bf5.close();
-            
+            while (fileScanner3.hasNextLine()) {
+                fiveLetterWords.add(fileScanner3.nextLine());
+            }
+            while (fileScanner4.hasNextLine()) {
+                sixLetterWords.add(fileScanner4.nextLine());
+            }
+            while (fileScanner5.hasNextLine()) {
+                sevenLetterWords.add(fileScanner5.nextLine());
+            }
         }
         catch (FileNotFoundException e){
             System.out.println(e.getMessage());
         }
 
-        // storing the data in arraylist to array
-        //String[] array1
-            //= threeLetterWords.toArray(new String[0]);
-
-        // printing each line of file 
-        // which is stored in array
-        for (String str : threeLetterWords) {
-            System.out.println(str);
-        }
+        //this can be used to print an array to make sure they are not empty
+        //you can just change the array to run it for
+        //leave it commented out unless you want to test it
+//        for (String str : sevenLetterWords) {
+//            System.out.println(str);
+//        }
     }
     
-    public String RandomWord(int wordList) {
+    public String randomWord(int wordList) {
         String currentWord = "Not working";
         
         switch(wordList){

@@ -15,6 +15,7 @@ import wordlegroupproject.gui.Window;
 public class WordleGroupProject {
     // Temp variable
     private static Window mWindow;
+    private static WordSelection mSelect;
     
     private static int wordLength = 5;
     private static int guessCount = 7;
@@ -57,9 +58,9 @@ public class WordleGroupProject {
         mWindow.getSettings().show();
 
         // TODO: Any functionality
-        WordSelection wordSelect = new WordSelection();
-        wordSelect.listExtraction();
-        
+        mSelect = new WordSelection();
+        mSelect.listExtraction();
+       
     }
     
    /**
@@ -98,6 +99,9 @@ public class WordleGroupProject {
             mWindow.getGrid().show();
             mWindow.getKeyboard().show();
             mWindow.getSettings().hide();
+            String selectedWord;
+            selectedWord = mSelect.randomWord(wordLength);
+            System.out.println(selectedWord);
         }
         
         if (wordLength > 7) wordLength = 7;
@@ -107,5 +111,6 @@ public class WordleGroupProject {
         
         mWindow.getSettings().setWordLengthLabel(wordLength);
         mWindow.getSettings().setGuessCountLabel(guessCount);
+        
     }
 }
