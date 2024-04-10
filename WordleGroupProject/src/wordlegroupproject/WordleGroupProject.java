@@ -22,6 +22,8 @@ public class WordleGroupProject {
     
     private static String selectedWord;
     
+    private static wordCheck mCheck;
+    
     public static void main(String[] args) {
         
         /**
@@ -62,7 +64,10 @@ public class WordleGroupProject {
         // TODO: Any functionality
         mSelect = new WordSelection();
         mSelect.listExtraction();
+        
+        mCheck = new wordCheck(mWindow);
        
+        
     }
     
    /**
@@ -103,6 +108,7 @@ public class WordleGroupProject {
             mWindow.getSettings().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
+//                         mCheck.checkGuess(selectedWord, "weird", 1);
         }
         
         if (wordLength > 7) wordLength = 7;
