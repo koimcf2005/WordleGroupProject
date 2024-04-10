@@ -21,6 +21,7 @@ public class WordleGroupProject {
     private static int guessCount = 7;
     
     private static String selectedWord;
+    private static String currentGuess = "";
     
     private static wordCheck mCheck;
     
@@ -76,18 +77,28 @@ public class WordleGroupProject {
     * @author Koi McFarland
     */
     public static void getKeyboardInput(InputButton key) {
-        switch (key.getLetter()) {
-            case ' ' -> { // Enter key
-                System.out.println("Enter was pressed");
+        
+        //for(int i = 0; i < selectedWord.length(); i++){
+        
+        
+            switch (key.getLetter()) {
+                case ' ' -> { // Enter key
+                    //System.out.println("Enter was pressed");
+                    System.out.println(currentGuess);
+                    //currentGuess = "";
+                }
+                case '\b' -> { // Delete key
+                    //System.out.println("Delete was pressed");
+                     currentGuess = currentGuess.substring(0, currentGuess.length() - 1);
+                }
+                default -> { // Letter key
+                    //System.out.println(key.getLetter() + " was pressed");
+                    currentGuess += key.getLetter();
+                }
             }
-            case '\b' -> { // Delete key
-                System.out.println("Delete was pressed");
-            }
-            default -> { // Letter key
-                System.out.println(key.getLetter() + " was pressed");
-            }
-        }
+        //}
     }
+        
     
     public static void getSettingsInput(JButton input) {
         if (input.equals(mWindow.getSettings().getWordLengthButton0()))
@@ -108,7 +119,7 @@ public class WordleGroupProject {
             mWindow.getSettings().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
-//                         mCheck.checkGuess(selectedWord, "weird", 1);
+//            mCheck.checkGuess(selectedWord, currentGuess, 1);
         }
         
         if (wordLength > 7) wordLength = 7;
