@@ -1,10 +1,10 @@
-package wordlegroupproject.gui;
+package wordle_gui;
 
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
-import wordlegroupproject.WordleGroupProject;
+import wordle_main.WordleGroupProject;
 
 /**
  * @author koimc

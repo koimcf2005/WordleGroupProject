@@ -1,4 +1,4 @@
-package wordlegroupproject.gui;
+package wordle_gui;
 
 import java.awt.event.ActionListener;
 import java.awt.Color;

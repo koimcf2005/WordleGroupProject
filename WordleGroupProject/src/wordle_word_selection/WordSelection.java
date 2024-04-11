@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package WordSelection;
+package wordle_word_selection;
 
 import java.util.Scanner;
 import java.io.FileInputStream;
@@ -11,8 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
- * @author Kayla Dixon
+  * @author Kayla Dixon
  */
 public class WordSelection {
     //word list initialization
@@ -38,31 +33,31 @@ public class WordSelection {
             // load data from files
             String threeWord = System.getProperty("user.dir");
             fileInStream1 = new FileInputStream (threeWord 
-                    + "\\src\\WordSelection\\3-LetterWords.txt");
+                    + "\\src\\wordle_word_selection\\3-LetterWords.txt");
             //System.out.println("Opened file one");
             fileScanner1 = new Scanner(fileInStream1);
             
             String fourWord = System.getProperty("user.dir");
             fileInStream2 = new FileInputStream (fourWord 
-                    + "\\src\\WordSelection\\4-LetterWords.txt");
+                    + "\\src\\wordle_word_selection\\4-LetterWords.txt");
             //System.out.println("Opened file two");
             fileScanner2 = new Scanner(fileInStream2);
             
             String fiveWord = System.getProperty("user.dir");
             fileInStream3 = new FileInputStream (fiveWord 
-                    + "\\src\\WordSelection\\5-LetterWords.txt");
+                    + "\\src\\wordle_word_selection\\5-LetterWords.txt");
             //System.out.println("Opened file three");
             fileScanner3 = new Scanner(fileInStream3);
             
             String sixWord = System.getProperty("user.dir");
             fileInStream4 = new FileInputStream (sixWord 
-                    + "\\src\\WordSelection\\6-LetterWords.txt");
+                    + "\\src\\wordle_word_selection\\6-LetterWords.txt");
             //System.out.println("Opened file four");
             fileScanner4 = new Scanner(fileInStream4);
             
             String sevenWord = System.getProperty("user.dir");
             fileInStream5 = new FileInputStream (sevenWord 
-                    + "\\src\\WordSelection\\7-LetterWords.txt");
+                    + "\\src\\wordle_word_selection\\7-LetterWords.txt");
             //System.out.println("Opened file five");
             fileScanner5 = new Scanner(fileInStream5);
 
@@ -92,9 +87,9 @@ public class WordSelection {
         //this can be used to print an array to make sure they are not empty
         //you can just change the array to run it for
         //leave it commented out unless you want to test it
-//        for (String str : sevenLetterWords) {
-//            System.out.println(str);
-//        }
+        //for (String str : sevenLetterWords) {
+        //    System.out.println(str);
+        //}
     }
     
     public String randomWord(int wordList) {
@@ -128,12 +123,6 @@ public class WordSelection {
                 currentWord = sevenLetterWords.get(index5);
             }
         }
-        
         return currentWord;
     }
-    
-    
-    
-    
-
 }
