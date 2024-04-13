@@ -78,7 +78,7 @@ public class WordleGroupProject {
     * @author Koi McFarland
     */
     public static void getKeyboardInput(InputButton key) {
-        mUserLetters.getKeyboardInput(key, guessCount,selectedWord);
+        mUserLetters.getKeyboardInput(key, selectedWord);
     }
         
     
