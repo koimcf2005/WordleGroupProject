@@ -9,20 +9,10 @@ import javax.swing.JFrame;
  * @author koimc
  */
 public class Keyboard {
-    
-    // Member variables
-    private final ActionListener listener;
     private final JFrame window;
-    
-    // List of each button the user will press
+    private final ActionListener listener;
     private final ArrayList<InputButton> mButtonList = new ArrayList<>();
-    
-    // Used to organize mButtonList in the order of the qwerty keyboard
-    private final char[] qwertyOrder = {
-        'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P',
-        'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L',
-        'Z', 'X', 'C', 'V', 'B', 'N', 'M'
-    };
+    private final String qwertyOrder = "QWERTYUIOPASDFGHJKLZXCVBNM";
     
     // Constructor
     public Keyboard(ActionListener listener, JFrame window) {
@@ -30,23 +20,11 @@ public class Keyboard {
         this.window = window;
     }
     
-    public void hide() {
-        for (int button = 0; button < mButtonList.size(); button++) {
-            mButtonList.get(button).setVisible(false);
-        }
-    }
-    
-    public void show() {
-        for (int button = 0; button < mButtonList.size(); button++) {
-            mButtonList.get(button).setVisible(true);
-        }
-    }
-    
     public void createButtons() {
         // Loops through every letter in the order of 'qwerty'
-        for (int letter = 0; letter < qwertyOrder.length; letter++) {
+        for (int letter = 0; letter < qwertyOrder.length(); letter++) {
             // Add a new button to the list and assign its letter and action listener
-            mButtonList.add(new InputButton(qwertyOrder[letter], listener));
+            mButtonList.add(new InputButton(qwertyOrder.charAt(letter), listener));
         }
         
         // This for-loop adds the buttons to the screen and sets their coordinates and size
@@ -102,8 +80,18 @@ public class Keyboard {
                 retButton = mButtonList.get(button);
             }
         }
-        
         return retButton;
     }
     
+    public void hide() {
+        for (int button = 0; button < mButtonList.size(); button++) {
+            mButtonList.get(button).setVisible(false);
+        }
+    }
+    
+    public void show() {
+        for (int button = 0; button < mButtonList.size(); button++) {
+            mButtonList.get(button).setVisible(true);
+        }
+    }
 }

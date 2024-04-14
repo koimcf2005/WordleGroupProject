@@ -6,12 +6,8 @@ import wordle_gui.Window;
  * @author andre
  */
 public class WordCheck {
-
-    private Window mWindow;
-
-    public WordCheck(Window mWindow) {
-        this.mWindow = mWindow;
-    }
+    // Object variables
+    private Window mWindow = WordleGroupProject.mWindow;
 
     public void checkGuess(String selectedWord, String guess, int guessCount) {
         for (int i = 0; i < selectedWord.length(); i++) {

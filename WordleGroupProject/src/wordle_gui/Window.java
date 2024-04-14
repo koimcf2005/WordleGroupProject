@@ -14,11 +14,11 @@ public class Window extends JFrame implements ActionListener {
     // Member variables
     private Keyboard mKeyboard;
     private WordGrid mGrid; 
-    private Settings mSettings;
+    private StartMenu mStartMenu;
     
     // Constructor
     public Window() {
-        // Just sets basic settings for the window
+        // Just sets basic StartMenu for the window
         setTitle("Wordle Group Project");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(530, 735);
@@ -28,8 +28,8 @@ public class Window extends JFrame implements ActionListener {
         setVisible(true);
     }
 
-    public void createSettings() {
-        mSettings = new Settings(this, this);
+    public void createStartMenu() {
+        mStartMenu = new StartMenu(this, this);
     }
     
     public void createKeyboard() {
@@ -47,7 +47,7 @@ public class Window extends JFrame implements ActionListener {
     
     public Keyboard getKeyboard() { return mKeyboard; }
     public WordGrid getGrid() { return mGrid; }
-    public Settings getSettings() { return mSettings; }
+    public StartMenu getStartMenu() { return mStartMenu; }
     
     @Override
     // actionPerformed runs any time any button is pressed
@@ -67,16 +67,16 @@ public class Window extends JFrame implements ActionListener {
         if (keyPressed != null) {
             WordleGroupProject.getKeyboardInput(keyPressed);
         }
-        else if (e.getSource() == mSettings.getWordLengthButton0())
-            WordleGroupProject.getSettingsInput(mSettings.getWordLengthButton0());
-        else if (e.getSource() == mSettings.getWordLengthButton1())
-            WordleGroupProject.getSettingsInput(mSettings.getWordLengthButton1());
-        else if (e.getSource() == mSettings.getGuessCountButton0())
-            WordleGroupProject.getSettingsInput(mSettings.getGuessCountButton0());
-        else if (e.getSource() == mSettings.getGuessCountButton1())
-            WordleGroupProject.getSettingsInput(mSettings.getGuessCountButton1());
-        else if (e.getSource() == mSettings.getStartButton())
-            WordleGroupProject.getSettingsInput(mSettings.getStartButton());
+        else if (e.getSource() == mStartMenu.getWordLengthButton0())
+            WordleGroupProject.getStartMenuInput(mStartMenu.getWordLengthButton0());
+        else if (e.getSource() == mStartMenu.getWordLengthButton1())
+            WordleGroupProject.getStartMenuInput(mStartMenu.getWordLengthButton1());
+        else if (e.getSource() == mStartMenu.getGuessCountButton0())
+            WordleGroupProject.getStartMenuInput(mStartMenu.getGuessCountButton0());
+        else if (e.getSource() == mStartMenu.getGuessCountButton1())
+            WordleGroupProject.getStartMenuInput(mStartMenu.getGuessCountButton1());
+        else if (e.getSource() == mStartMenu.getStartButton())
+            WordleGroupProject.getStartMenuInput(mStartMenu.getStartButton());
         else
             System.out.println("Error, action called but there was not button.");
     }

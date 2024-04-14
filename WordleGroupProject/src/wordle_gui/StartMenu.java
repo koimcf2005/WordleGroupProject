@@ -14,7 +14,7 @@ import javax.swing.SwingConstants;
 /**
  * @author koimc
  */
-public class Settings {
+public class StartMenu {
     private final JFrame window;
     private final JLabel titleLabel;
     private final JButton guessCountButton0;
@@ -25,7 +25,7 @@ public class Settings {
     private final JLabel wordLengthLabel;
     private final JButton startButton;
     
-    public Settings(JFrame window, ActionListener listener) {
+    public StartMenu(JFrame window, ActionListener listener) {
         this.window = window;
         titleLabel = new JLabel();
         wordLengthButton0 = new JButton();

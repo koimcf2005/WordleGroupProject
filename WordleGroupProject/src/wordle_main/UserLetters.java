@@ -7,18 +7,13 @@ import wordle_gui.Window;
  * @author andre
  */
 public class UserLetters {
-
+    // Object variables
+    private Window mWindow = WordleGroupProject.mWindow;
+    // Primitive variables
     public static String currentGuess = "";
     public static int currentRound = 0;
 
-    private Window mWindow;
-
-    public UserLetters(Window mWindow) {
-        this.mWindow = mWindow;
-    }
-
     public void getKeyboardInput(InputButton key, String selectedWord) {
-
         switch (key.getLetter()) {
             case ' ' -> { // Enter key
                 if (currentGuess.length() == selectedWord.length()) {
@@ -26,7 +21,6 @@ public class UserLetters {
                     currentGuess = "";
                     currentRound++;
                 }
-
             }
             case '\b' -> { // Delete key
 

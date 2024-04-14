@@ -13,18 +13,15 @@ import wordle_gui.Window;
  * @author Kayla Dixon
  */
 public class WordleGroupProject {
-    // Temp variable
-    private static Window mWindow;
+    // Object variables
+    public static Window mWindow;
     private static WordSelection mSelect;
-    
+    private static WordCheck mCheck;
+    private static UserLetters mUserLetters;
+    // Primitive variables
     private static int wordLength = 5;
     private static int guessCount = 7;
-    
     private static String selectedWord;
-    
-    private static WordCheck mCheck;
-    
-    private static UserLetters mUserLetters;
     
     public static void main(String[] args) {
         
@@ -53,23 +50,22 @@ public class WordleGroupProject {
          *      If you want to use the grid, check if it is null first!
          */
         
-        // Instantiates the window and creates the keyboard / start screen
+        // Instantiates the gui
         mWindow = new Window();
         mWindow.createKeyboard();
         
-        mWindow.createSettings();
-        mWindow.getSettings();
+        mWindow.createStartMenu();
+        mWindow.getStartMenu();
         
         mWindow.getKeyboard().hide();
-        mWindow.getSettings().show();
+        mWindow.getStartMenu().show();
 
-        // TODO: Any functionality
+        // Instantiates the logic classes
         mSelect = new WordSelection();
         mSelect.listExtraction();
         
-        mCheck = new WordCheck(mWindow);
-        mUserLetters = new UserLetters(mWindow);
-       
+        mCheck = new WordCheck();
+        mUserLetters = new UserLetters();
     }
     
    /**
@@ -79,37 +75,34 @@ public class WordleGroupProject {
     */
     public static void getKeyboardInput(InputButton key) {
         mUserLetters.getKeyboardInput(key, selectedWord);
-    }
-        
+    }    
     
-    public static void getSettingsInput(JButton input) {
-        if (input.equals(mWindow.getSettings().getWordLengthButton0()))
-            wordLength -= 1;
-        else if (input.equals(mWindow.getSettings().getWordLengthButton1()))
-            wordLength += 1;
-        else if (input.equals(mWindow.getSettings().getGuessCountButton0()))
-            guessCount -= 1;
-        else if (input.equals(mWindow.getSettings().getGuessCountButton1()))
-            guessCount += 1;
-        else if (input.equals(mWindow.getSettings().getStartButton())) {
-            
+    public static void getStartMenuInput(JButton input) {
+        if (input.equals(mWindow.getStartMenu().getWordLengthButton0())) {
+            wordLength -= 1 * boolToInt(wordLength > 3);
+        } else if (input.equals(mWindow.getStartMenu().getWordLengthButton1())) {
+            wordLength += 1 * boolToInt(wordLength < 7);
+        } else if (input.equals(mWindow.getStartMenu().getGuessCountButton0())) {
+            guessCount -= 1 * boolToInt(guessCount > 3);
+        } else if (input.equals(mWindow.getStartMenu().getGuessCountButton1())) {
+            guessCount += 1 * boolToInt(guessCount < 7);
+        } else if (input.equals(mWindow.getStartMenu().getStartButton())) {
             // This is where the game starts
             // Creates the grid and reveals the keyboard
+            // Hides the StartMenu and selects a random word
             mWindow.createGrid(wordLength, guessCount);
             mWindow.getGrid().show();
             mWindow.getKeyboard().show();
-            mWindow.getSettings().hide();
+            mWindow.getStartMenu().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
         }
-        
-        if (wordLength > 7) wordLength = 7;
-        else if (wordLength < 3) wordLength = 3;
-        if (guessCount > 7) guessCount = 7;
-        else if (guessCount < 3) guessCount = 3;
-        
-        mWindow.getSettings().setWordLengthLabel(wordLength);
-        mWindow.getSettings().setGuessCountLabel(guessCount);
-        
+
+        mWindow.getStartMenu().setWordLengthLabel(wordLength);
+        mWindow.getStartMenu().setGuessCountLabel(guessCount);
+    }
+    
+    private static int boolToInt(boolean bool) {
+        return bool ? 1 : 0;
     }
 }
