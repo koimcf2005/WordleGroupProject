@@ -10,19 +10,23 @@ public class WordCheck {
     private Window mWindow = WordleGroupProject.mWindow;
 
     public void checkGuess(String selectedWord, String guess, int guessCount) {
+        
+        String lowGuess = guess.toLowerCase();
+        
         for (int i = 0; i < selectedWord.length(); i++) {
-            if (selectedWord.contains(Character.toString(guess.charAt(i)))) {
+            if (selectedWord.contains(Character.toString(lowGuess.charAt(i)))) {
                 mWindow.getGrid().getBox(guessCount, i).setAsWrongSpot();
-                System.out.print("R ");
+                //System.out.print("R ");
 
-                if (guess.charAt(i) == selectedWord.charAt(i)) {
+                if (lowGuess.charAt(i) == selectedWord.charAt(i)) {
                     mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();
-                    System.out.print("P");
+                    //System.out.print("P");
                 }
                 System.out.println("");
             } else {
                 mWindow.getGrid().getBox(guessCount, i).setAsIncorrectLetter();
-                System.out.println("W");
+                mWindow.getKeyboard().getButtonByText(Character.toString(guess.charAt(i))).setAsGrey();
+                //System.out.println("W");
             }
         }
     }
