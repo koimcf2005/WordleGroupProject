@@ -18,14 +18,12 @@ public class WordCheck {
                 mWindow.getGrid().getBox(guessCount, i).setAsWrongSpot();
 
                 if (lowGuess.charAt(i) == selectedWord.charAt(i)) {
-                    mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();
-                   
+                    mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();   
                 }
                 System.out.println("");
             } else {
                 mWindow.getGrid().getBox(guessCount, i).setAsIncorrectLetter();
-                mWindow.getKeyboard().getButtonByText(Character.toString(guess.charAt(i))).setAsGrey();
-                
+                mWindow.getKeyboard().getButtonByText(Character.toString(guess.charAt(i))).setAsGrey();   
             }
         }
     }
