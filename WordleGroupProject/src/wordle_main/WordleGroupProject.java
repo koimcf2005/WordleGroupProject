@@ -63,8 +63,6 @@ public class WordleGroupProject {
         // Instantiates the logic classes
         mSelect = new WordSelection();
         mSelect.listExtraction();
-        
-        mCheck = new WordCheck();
         mUserLetters = new UserLetters();
     }
     
@@ -74,7 +72,7 @@ public class WordleGroupProject {
     * @author Koi McFarland
     */
     public static void getKeyboardInput(InputButton key) {
-        mUserLetters.getKeyboardInput(key, selectedWord);
+            mUserLetters.getKeyboardInput(key, selectedWord);
     }    
     
     public static void getStartMenuInput(JButton input) {
@@ -96,6 +94,8 @@ public class WordleGroupProject {
             mWindow.getStartMenu().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
+            
+//             mCheck.checkGuess(selectedWord, "black", 0);
         }
 
         mWindow.getStartMenu().setWordLengthLabel(wordLength);

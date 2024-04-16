@@ -18,8 +18,9 @@ public class UserLetters {
             case ' ' -> { // Enter key
                 if (currentGuess.length() == selectedWord.length()) {
                     System.out.println(currentGuess);
-                    currentGuess = "";
+                    WordCheck.checkGuess(selectedWord, currentGuess, currentRound);
                     currentRound++;
+                    currentGuess = "";
                 }
             }
             case '\b' -> { // Delete key
@@ -38,5 +39,9 @@ public class UserLetters {
                 }
             }
         }
+    }
+    
+    public String getCurrentGuess(){
+        return currentGuess;
     }
 }
