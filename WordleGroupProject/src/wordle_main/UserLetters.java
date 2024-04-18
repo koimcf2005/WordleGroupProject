@@ -58,4 +58,8 @@ public class UserLetters {
     public String getCurrentGuess(){
         return currentGuess;
     }
+    
+    public int getCurrentRound(){
+        return currentRound;
+    }
 }
