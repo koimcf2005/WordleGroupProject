@@ -151,28 +151,12 @@ public class GameResults extends JFrame implements ActionListener{
         setVisible(false);
     }
     
-    public void gameRestart() {
-        WordleGroupProject.setWindow(new Window());
-        WordleGroupProject.getWindow().createKeyboard();
-        
-        WordleGroupProject.getWindow().createStartMenu();
-        WordleGroupProject.getWindow().getStartMenu();
-
-        WordleGroupProject.getWindow().getKeyboard().hide();
-        WordleGroupProject.getWindow().getStartMenu().show();
-        
-        mSelect = new WordSelection();
-        mSelect.listExtraction();
-        mUserLetters = new UserLetters();
-    }
-    
     @Override
-    
     public void actionPerformed(ActionEvent a) {
         if(a.getSource() == replayButton) {
             hidden();
             WordleGroupProject.getWindow().dispose();
-            gameRestart();
+            WordleGroupProject.gameRestart();
         }
         else if(a.getSource() == endGameButton) {
             System.exit(0);

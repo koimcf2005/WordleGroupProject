@@ -104,6 +104,17 @@ public class WordleGroupProject {
         mWindow.getStartMenu().setGuessCountLabel(guessCount);
     }
     
+    public static void gameRestart() {
+        mWindow = new Window();
+        mWindow.createKeyboard();
+        
+        mWindow.createStartMenu();
+        mWindow.getStartMenu();
+
+        mWindow.getKeyboard().hide();
+        mWindow.getStartMenu().show();
+    }
+    
     private static int boolToInt(boolean bool) {
         return bool ? 1 : 0;
     }
