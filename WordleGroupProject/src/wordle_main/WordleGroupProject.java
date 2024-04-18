@@ -105,6 +105,9 @@ public class WordleGroupProject {
     }
     
     public static void gameRestart() {
+        wordLength = 5;
+        guessCount = 7;
+        
         mWindow = new Window();
         mWindow.createKeyboard();
         
