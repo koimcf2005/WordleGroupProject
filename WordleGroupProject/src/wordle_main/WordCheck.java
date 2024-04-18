@@ -12,13 +12,44 @@ public class WordCheck {
     
     private static Window mWindow = WordleGroupProject.mWindow;
     private static GameResults mResult;
+    
+    private static int getCount(String str, char ch){
+        int count = 0;
+        for(int i = 0; i < str.length(); i++){
+            if(str.charAt(i) == ch){
+                count ++;
+            }
+        }
+        return count;
+    }
 
     public static void checkGuess(String selectedWord, String guess, int guessCount) {
         mResult = new GameResults();
         String lowGuess = guess.toLowerCase();
         
         for (int i = 0; i < selectedWord.length(); i++) {
-            if (selectedWord.contains(Character.toString(lowGuess.charAt(i)))) {
+            
+            char currentLetter = lowGuess.charAt(i);
+            System.out.println(currentLetter);
+            String checkGuess = lowGuess.replaceFirst(Character.toString(currentLetter)," ");
+            System.out.println(checkGuess);
+                if(WordCheck.getCount(lowGuess,currentLetter) > 1){
+                    System.out.println(currentLetter + " appears twice!");
+                    int secondLetter = lowGuess.replace(currentLetter, ' ').indexOf(Character.toString(currentLetter)) + 1;
+                    StringBuilder modGuess = new StringBuilder(lowGuess);
+                    modGuess.setCharAt(secondLetter, ' ');
+                    System.out.println("made it to here");
+                    if(lowGuess.charAt(i) == selectedWord.charAt(i)){
+                        lowGuess = modGuess.toString();
+                        System.out.println("First Was Right, now: " + lowGuess);
+                    }
+                    else{
+                        lowGuess = lowGuess.replaceFirst(Character.toString(currentLetter), " ");
+                        System.out.println("Second was better: " + lowGuess);
+                    }
+                }
+            
+            if (selectedWord.contains(Character.toString(lowGuess.charAt(i)))) { 
                 mWindow.getGrid().getBox(guessCount, i).setAsWrongSpot();
 
                 if (lowGuess.charAt(i) == selectedWord.charAt(i)) {
@@ -37,7 +68,7 @@ public class WordCheck {
         }
     }
     
-    public boolean getWin(){
+        public boolean getWin(){
         return hasWon;
     }
     
