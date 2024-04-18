@@ -39,22 +39,22 @@ public class WordCheck {
             for (int i = 0; i < selectedWord.length(); i++) {
 
                 char currentLetter = lowGuess.charAt(i);
-                System.out.println(currentLetter);
+                //System.out.println(currentLetter);
                 String checkGuess = lowGuess.replaceFirst(Character.toString(currentLetter), " ");
-                System.out.println(checkGuess);
+                //System.out.println(checkGuess);
                 if (WordCheck.getCount(lowGuess, currentLetter) > 1) {
-                    System.out.println(currentLetter + " appears twice!");
+                    //System.out.println(currentLetter + " appears twice!");
                     int secondLetter = lowGuess.replace(currentLetter, ' ').indexOf(Character.toString(currentLetter)) + 1;
                     StringBuilder modGuess = new StringBuilder(lowGuess);
                     modGuess.setCharAt(secondLetter, ' ');
-                    System.out.println("made it to here");
+                    //System.out.println("made it to here");
                     if (lowGuess.charAt(i) == selectedWord.charAt(i)) {
                         lowGuess = modGuess.toString();
-                        System.out.println("First Was Right, now: " + lowGuess);
+                        //System.out.println("First Was Right, now: " + lowGuess);
                     } 
                     else {
                         lowGuess = lowGuess.replaceFirst(Character.toString(currentLetter), " ");
-                        System.out.println("Second was better: " + lowGuess);
+                        //System.out.println("Second was better: " + lowGuess);
                     }
                 }
 

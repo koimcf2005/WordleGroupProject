@@ -1,11 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package wordle_main;
 
 /**
- *
  * @author Kayla Dixon
  */
 public class FinalScore {
@@ -14,15 +9,12 @@ public class FinalScore {
     
     public String displayFinalScore(){
         mUserLetters = new UserLetters();
-//        int finalRound = mUserLetters.getCurrentRound() + 1;
-        
-        System.out.println(WordCheck.getWin());
-        
+                
         if(WordCheck.getWin() == true) {
             int finalRound = mUserLetters.getCurrentRound() + 1;
             switch(finalRound) {
                 case 1 -> {
-                    label = "Cheater.";
+                    label = "You seem like a Cheater.";
                 }
                 case 2 -> {
                     label = "I smell foul play.";
@@ -34,13 +26,13 @@ public class FinalScore {
                     label = "I guess you did well.";
                 }
                 case 5 -> {
-                    label = "I bet you think your so cool.";
+                    label = "You think you're so cool.";
                 }
                 case 6 -> {
-                    label = "You cut it pretty close there.";
+                    label = "You cut it real close there.";
                 }
                 case 7 -> {
-                    label = "I suppose you pass this time.";
+                    label = "It's a miracle!";
                 }
             }
         }

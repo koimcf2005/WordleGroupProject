@@ -17,6 +17,9 @@ public class UserLetters {
     public static int currentRound = 0;
 
     public void getKeyboardInput(InputButton key, String selectedWord, int guessLimit) {
+        if (WordCheck.getWin() == true)
+            return;
+        
         mResult = new GameResults();
         switch (key.getLetter()) {
             case ' ' -> { // Enter key

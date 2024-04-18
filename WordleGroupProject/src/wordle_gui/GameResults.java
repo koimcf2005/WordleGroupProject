@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package wordle_gui;
 
 import java.awt.Color;
@@ -11,7 +7,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import wordle_main.FinalScore;
-//import wordle_gui.Window;
 import wordle_main.WordleGroupProject;
 
 
@@ -45,30 +40,37 @@ public class GameResults extends JFrame implements ActionListener{
         setLayout(null);
         setVisible(false);
 
-        winOrLose.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
+        winOrLose.setFont(new java.awt.Font("Verdana", 1, 36)); // NOI18N
         winOrLose.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         winOrLose.setForeground(new Color(255, 255, 255));
         winOrLose.setText("Win or lose!");
+        winOrLose.setFocusable(false);
 
-        userScore.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        userScore.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         userScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         userScore.setForeground(new Color(255, 255, 255));
         userScore.setText("String for how you did");
+        userScore.setFocusable(false);
 
-        guessLabel.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        guessLabel.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         guessLabel.setForeground(new java.awt.Color(255, 204, 0));
         guessLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         guessLabel.setText("correct word - your guess");
+        guessLabel.setFocusable(false);
 
-        replayButton.setBackground(new java.awt.Color(0, 204, 51));
-        replayButton.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
+        replayButton.setBackground(new java.awt.Color(83, 141, 78));
+        replayButton.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         replayButton.setForeground(new java.awt.Color(255, 255, 255));
         replayButton.setText("Play Again?");
+        replayButton.setFocusable(false);
+        replayButton.setBorderPainted(false);
 
-        endGameButton.setBackground(new java.awt.Color(153, 153, 153));
-        endGameButton.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        endGameButton.setForeground(new java.awt.Color(0, 102, 0));
+        endGameButton.setBackground(new java.awt.Color(129, 131, 132));
+        endGameButton.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        endGameButton.setForeground(new java.awt.Color(255, 255, 255));
         endGameButton.setText("End Game");
+        endGameButton.setFocusable(false);
+        endGameButton.setBorderPainted(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -131,16 +133,8 @@ public class GameResults extends JFrame implements ActionListener{
         
     }
     
-//    public void setUserScoreLabel() {
-//        String line;
-//        
-//        line = mFinal.finalString();
-//        
-//        userScore.setText(line);
-//    }
-    
     public void setGuessLabel(String answer, String guess) {
-        guessLabel.setText(answer.toUpperCase() + " - Your Guess: " + guess);
+        guessLabel.setText("The word was " + answer.toUpperCase());
     }
     
     public void unhidden() {
@@ -152,7 +146,6 @@ public class GameResults extends JFrame implements ActionListener{
         
         setVisible(true);
         setAlwaysOnTop( true );
-        //setUserScoreLabel();
     }
     
     
