@@ -10,10 +10,9 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import wordle_main.UserLetters;
+import wordle_main.FinalScore;
 //import wordle_gui.Window;
 import wordle_main.WordleGroupProject;
-import wordle_word_selection.WordSelection;
 
 
 /**
@@ -21,9 +20,7 @@ import wordle_word_selection.WordSelection;
  * @author Kayla Dixon
  */
 public class GameResults extends JFrame implements ActionListener{
-    private static WordSelection mSelect;
-    private static UserLetters mUserLetters;
-            
+    private static FinalScore mFinal;
     private final JButton endGameButton;
     private final JLabel guessLabel;
     private final JButton replayButton;
@@ -36,6 +33,7 @@ public class GameResults extends JFrame implements ActionListener{
         guessLabel = new javax.swing.JLabel();
         replayButton = new javax.swing.JButton();
         endGameButton = new javax.swing.JButton();
+        mFinal = new FinalScore();
         
         replayButton.addActionListener(this);
         endGameButton.addActionListener(this);
@@ -54,8 +52,8 @@ public class GameResults extends JFrame implements ActionListener{
 
         userScore.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         userScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        userScore.setText("String for how you did");
         userScore.setForeground(new Color(255, 255, 255));
+        userScore.setText("String for how you did");
 
         guessLabel.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         guessLabel.setForeground(new java.awt.Color(255, 204, 0));
@@ -133,17 +131,28 @@ public class GameResults extends JFrame implements ActionListener{
         
     }
     
-    public void setUserScoreLabel() {
-        
-    }
+//    public void setUserScoreLabel() {
+//        String line;
+//        
+//        line = mFinal.finalString();
+//        
+//        userScore.setText(line);
+//    }
     
     public void setGuessLabel(String answer, String guess) {
         guessLabel.setText(answer.toUpperCase() + " - Your Guess: " + guess);
     }
     
     public void unhidden() {
+        String line;
+        
+        line = mFinal.displayFinalScore();
+        
+        userScore.setText(line);
+        
         setVisible(true);
         setAlwaysOnTop( true );
+        //setUserScoreLabel();
     }
     
     
