@@ -32,9 +32,7 @@ public class WordCheck {
         if(lowGuess.compareTo(selectedWord)== 0){
             hasWon = true;
             mResult.unhidden();
-            
         }
-        mResult.unhidden();
     }
     
     public boolean getWin(){

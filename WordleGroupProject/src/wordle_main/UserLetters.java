@@ -1,5 +1,6 @@
 package wordle_main;
 
+import wordle_gui.GameResults;
 import wordle_gui.InputButton;
 import wordle_gui.Window;
 
@@ -9,11 +10,13 @@ import wordle_gui.Window;
 public class UserLetters {
     // Object variables
     private Window mWindow = WordleGroupProject.mWindow;
+    private static GameResults mResult;
     // Primitive variables
     public static String currentGuess = "";
     public static int currentRound = 0;
 
-    public void getKeyboardInput(InputButton key, String selectedWord) {
+    public void getKeyboardInput(InputButton key, String selectedWord, int guessLimit) {
+        mResult = new GameResults();
         switch (key.getLetter()) {
             case ' ' -> { // Enter key
                 if (currentGuess.length() == selectedWord.length()) {
@@ -39,7 +42,17 @@ public class UserLetters {
                 }
             }
         }
+        if(currentRound == guessLimit) {
+            mResult.unhidden();
+        }
+
     }
+    
+//    public void endGame(int guessLimit) {
+//        if(currentRound == guessLimit) {
+//            mResult.unhidden();
+//        }
+//    }
     
     public String getCurrentGuess(){
         return currentGuess;

@@ -75,7 +75,7 @@ public class WordleGroupProject {
     * @author Koi McFarland
     */
     public static void getKeyboardInput(InputButton key) {
-            mUserLetters.getKeyboardInput(key, selectedWord);
+            mUserLetters.getKeyboardInput(key, selectedWord, guessCount);
     }    
     
     public static void getStartMenuInput(JButton input) {
@@ -97,6 +97,7 @@ public class WordleGroupProject {
             mWindow.getStartMenu().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
+            //mUserLetters.endGame(guessCount);
             
 //             mCheck.checkGuess(selectedWord, "black", 0);
         }
@@ -108,8 +109,5 @@ public class WordleGroupProject {
     private static int boolToInt(boolean bool) {
         return bool ? 1 : 0;
     }
-    
-    private static void endGame() {
-        
-    }
+ 
 }
