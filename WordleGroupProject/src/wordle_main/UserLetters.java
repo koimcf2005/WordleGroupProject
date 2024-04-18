@@ -5,7 +5,7 @@ import wordle_gui.InputButton;
 import wordle_gui.Window;
 
 /**
- * @author andre
+ * @author Andrew
  */
 public class UserLetters {
     // Object variables

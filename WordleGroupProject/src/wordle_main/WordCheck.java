@@ -4,7 +4,7 @@ import wordle_gui.GameResults;
 import wordle_gui.Window;
 
 /**
- * @author andre
+ * @author Andrew
  */
 public class WordCheck {
 
@@ -51,7 +51,8 @@ public class WordCheck {
                     if (lowGuess.charAt(i) == selectedWord.charAt(i)) {
                         lowGuess = modGuess.toString();
                         System.out.println("First Was Right, now: " + lowGuess);
-                    } else {
+                    } 
+                    else {
                         lowGuess = lowGuess.replaceFirst(Character.toString(currentLetter), " ");
                         System.out.println("Second was better: " + lowGuess);
                     }
