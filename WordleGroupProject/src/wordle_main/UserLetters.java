@@ -9,7 +9,7 @@ import wordle_gui.Window;
  */
 public class UserLetters {
     // Object variables
-    private Window mWindow = WordleGroupProject.mWindow;
+    private Window mWindow = WordleGroupProject.getWindow();
     private static GameResults mResult;
     // Primitive variables
     public static String currentGuess = "";
@@ -53,6 +53,16 @@ public class UserLetters {
             mResult.setGuessLabel(selectedWord, lastGuess);
         }
 
+    }
+    
+    
+    public void reset() {
+        mWindow = WordleGroupProject.getWindow();
+        currentGuess = "";
+        lastGuess = "";
+        currentRound = 0;
+        WordCheck.setHasWon(false);
+        WordCheck.setWindow(WordleGroupProject.getWindow());
     }
     
     public String getCurrentGuess(){

@@ -15,7 +15,7 @@ import wordle_gui.Window;
  */
 public class WordleGroupProject {
     // Object variables
-    public static Window mWindow;
+    private static Window mWindow;
     private static WordSelection mSelect;
     private static WordCheck mCheck;
     private static UserLetters mUserLetters;
@@ -113,6 +113,8 @@ public class WordleGroupProject {
 
         mWindow.getKeyboard().hide();
         mWindow.getStartMenu().show();
+        mUserLetters.reset();
+        
     }
     
     private static int boolToInt(boolean bool) {
