@@ -64,6 +64,11 @@ public class WordleGroupProject {
         mSelect = new WordSelection();
         mSelect.listExtraction();
         mUserLetters = new UserLetters();
+        
+        if(mCheck.getWin()){
+            //mWindow.createResultMenu();
+            System.out.println("game win");
+        }
     }
     
    /**
@@ -94,6 +99,13 @@ public class WordleGroupProject {
             mWindow.getStartMenu().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
+            if(mCheck.getWin() == true){
+                //mWindow.createResultMenu();
+                System.out.println("game win");
+            }
+            else {
+                System.out.println("fail");
+            }
             
 //             mCheck.checkGuess(selectedWord, "black", 0);
         }
@@ -104,5 +116,9 @@ public class WordleGroupProject {
     
     private static int boolToInt(boolean bool) {
         return bool ? 1 : 0;
+    }
+    
+    private static void endGame() {
+        
     }
 }
