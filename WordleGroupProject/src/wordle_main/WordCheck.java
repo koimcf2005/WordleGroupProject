@@ -27,6 +27,14 @@ public class WordCheck {
         mResult = new GameResults();
         String lowGuess = guess.toLowerCase();
         
+        if(lowGuess.compareTo(selectedWord)== 0){
+            hasWon = true;
+            mResult.unhidden();
+            mResult.setWinOrLoseLabel(hasWon);
+            mResult.setGuessLabel(selectedWord, guess);
+        }
+        
+        else{
         for (int i = 0; i < selectedWord.length(); i++) {
             
             char currentLetter = lowGuess.charAt(i);
@@ -60,12 +68,8 @@ public class WordCheck {
                 mWindow.getKeyboard().getButtonByText(Character.toString(guess.charAt(i))).setAsGrey();   
             }
         }
-        if(lowGuess.compareTo(selectedWord)== 0){
-            hasWon = true;
-            mResult.unhidden();
-            mResult.setWinOrLoseLabel(hasWon);
-            mResult.setGuessLabel(selectedWord, guess);
         }
+//       
     }
     
         public boolean getWin(){
