@@ -68,11 +68,6 @@ public class WordleGroupProject {
        
     }
     
-   /**
-    * This function gets all input from the Window class.
-    * @param key The InputButton that has been clicked
-    * @author Koi McFarland
-    */
     public static void getKeyboardInput(InputButton key) {
         mUserLetters.getKeyboardInput(key, selectedWord, guessCount);
     }    
