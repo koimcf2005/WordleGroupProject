@@ -32,6 +32,8 @@ public class WordCheck {
         if(lowGuess.compareTo(selectedWord)== 0){
             hasWon = true;
             mResult.unhidden();
+            mResult.setWinOrLoseLabel(hasWon);
+            mResult.setGuessLabel(selectedWord, guess);
         }
     }
     

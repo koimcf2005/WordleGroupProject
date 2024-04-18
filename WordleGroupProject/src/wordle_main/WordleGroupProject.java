@@ -16,7 +16,6 @@ import wordle_gui.Window;
 public class WordleGroupProject {
     // Object variables
     public static Window mWindow;
-    public static GameResults mResult;
     private static WordSelection mSelect;
     private static WordCheck mCheck;
     private static UserLetters mUserLetters;
@@ -75,7 +74,7 @@ public class WordleGroupProject {
     * @author Koi McFarland
     */
     public static void getKeyboardInput(InputButton key) {
-            mUserLetters.getKeyboardInput(key, selectedWord, guessCount);
+        mUserLetters.getKeyboardInput(key, selectedWord, guessCount);
     }    
     
     public static void getStartMenuInput(JButton input) {
@@ -97,7 +96,6 @@ public class WordleGroupProject {
             mWindow.getStartMenu().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
-            //mUserLetters.endGame(guessCount);
             
 //             mCheck.checkGuess(selectedWord, "black", 0);
         }

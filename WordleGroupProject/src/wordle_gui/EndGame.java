@@ -43,12 +43,13 @@ public class EndGame extends javax.swing.JFrame {
         winOrLose.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         winOrLose.setText("Win or lose!");
 
+        userScore.setBackground(new java.awt.Color(0, 204, 51));
         userScore.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         userScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         userScore.setText("String for how you did");
 
         guessLabel.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        guessLabel.setForeground(new java.awt.Color(0, 153, 51));
+        guessLabel.setForeground(new java.awt.Color(255, 204, 0));
         guessLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         guessLabel.setText("correct word - your guess");
 
@@ -56,6 +57,11 @@ public class EndGame extends javax.swing.JFrame {
         replayButton.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         replayButton.setForeground(new java.awt.Color(255, 255, 255));
         replayButton.setText("Play Again?");
+        replayButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                replayButtonActionPerformed(evt);
+            }
+        });
 
         endGameButton.setBackground(new java.awt.Color(153, 153, 153));
         endGameButton.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
@@ -67,24 +73,24 @@ public class EndGame extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(77, 77, 77)
+                .addComponent(userScore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(81, 81, 81))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(88, 88, 88)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(replayButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(endGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(102, 102, 102))
+            .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(62, 62, 62)
                         .addComponent(guessLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(userScore, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(13, 13, 13))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(76, 76, 76)
-                        .addComponent(winOrLose, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(88, 88, 88)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(replayButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(endGameButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(34, 34, 34)))
-                .addGap(68, 68, 68))
+                        .addComponent(winOrLose, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,6 +110,10 @@ public class EndGame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void replayButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_replayButtonActionPerformed
+        
+    }//GEN-LAST:event_replayButtonActionPerformed
 
     /**
      * @param args the command line arguments

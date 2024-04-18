@@ -10,14 +10,21 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import wordle_main.WordCheck;
+import wordle_main.UserLetters;
+//import wordle_gui.Window;
+import wordle_main.WordleGroupProject;
+import wordle_word_selection.WordSelection;
+
 
 /**
  *
  * @author Kayla Dixon
  */
 public class GameResults extends JFrame implements ActionListener{
-    private static WordCheck mResult;
+    private Window mWindow = WordleGroupProject.mWindow;
+    private static WordSelection mSelect;
+    private static UserLetters mUserLetters;
+            
     private final JButton endGameButton;
     private final JLabel guessLabel;
     private final JButton replayButton;
@@ -25,14 +32,16 @@ public class GameResults extends JFrame implements ActionListener{
     private final JLabel winOrLose;
     
     public GameResults() {
-        mResult = new WordCheck();
         winOrLose = new javax.swing.JLabel();
         userScore = new javax.swing.JLabel();
         guessLabel = new javax.swing.JLabel();
         replayButton = new javax.swing.JButton();
         endGameButton = new javax.swing.JButton();
+        
+        replayButton.addActionListener(this);
+        endGameButton.addActionListener(this);
 
-        setSize(400, 340);
+        setSize(400, 400); //340
         setResizable(false);
         getContentPane().setBackground(new Color(18, 18, 19));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -41,14 +50,16 @@ public class GameResults extends JFrame implements ActionListener{
 
         winOrLose.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
         winOrLose.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        winOrLose.setForeground(new Color(255, 255, 255));
         winOrLose.setText("Win or lose!");
 
         userScore.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
         userScore.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         userScore.setText("String for how you did");
+        userScore.setForeground(new Color(255, 255, 255));
 
         guessLabel.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        guessLabel.setForeground(new java.awt.Color(0, 153, 51));
+        guessLabel.setForeground(new java.awt.Color(255, 204, 0));
         guessLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         guessLabel.setText("correct word - your guess");
 
@@ -112,35 +123,24 @@ public class GameResults extends JFrame implements ActionListener{
         return endGameButton;
     }
     
-    public void setWinOrLoseLabel() {
-        if(mResult.getWin() == true) {
+    public void setWinOrLoseLabel(boolean win) {
+        if(win == true) {
             winOrLose.setText("You Win!");
         }
         else {
             winOrLose.setText("You Lose!");
         }
+        
+        
     }
     
     public void setUserScoreLabel() {
         
     }
     
-    public void setGuessLabel() {
-        
+    public void setGuessLabel(String answer, String guess) {
+        guessLabel.setText(answer.toUpperCase() + " - Your Guess: " + guess);
     }
-    
-    @Override
-    
-    public void actionPerformed(ActionEvent e) {
-        if(mResult.getWin()== true) {
-            
-            System.out.println("you win");
-        }
-        else {
-            System.out.println("you lose");
-        }
-    }
-   
     
     public void unhidden() {
         setVisible(true);
@@ -151,5 +151,35 @@ public class GameResults extends JFrame implements ActionListener{
     public void hidden() {
         setVisible(false);
     }
+    
+    public void gameRestart() {
+        mWindow = new Window();
+        mWindow.createKeyboard();
+        
+        mWindow.createStartMenu();
+        mWindow.getStartMenu();
+
+        mWindow.getKeyboard().hide();
+        mWindow.getStartMenu().show();
+        
+        mSelect = new WordSelection();
+        mSelect.listExtraction();
+        mUserLetters = new UserLetters();
+    }
+    
+    @Override
+    
+    public void actionPerformed(ActionEvent a) {
+        if(a.getSource() == replayButton) {
+            hidden();
+            mWindow.dispose();
+            gameRestart();
+        }
+        else if(a.getSource() == endGameButton) {
+            System.exit(0);
+        }
+    }
+    
+   
     
 }

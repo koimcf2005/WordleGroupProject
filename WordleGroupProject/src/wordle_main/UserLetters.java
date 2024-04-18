@@ -13,6 +13,7 @@ public class UserLetters {
     private static GameResults mResult;
     // Primitive variables
     public static String currentGuess = "";
+    public static String lastGuess;
     public static int currentRound = 0;
 
     public void getKeyboardInput(InputButton key, String selectedWord, int guessLimit) {
@@ -42,17 +43,17 @@ public class UserLetters {
                 }
             }
         }
+        if(currentRound == guessLimit - 1) {
+            lastGuess = currentGuess;
+        }
         if(currentRound == guessLimit) {
             mResult.unhidden();
+            boolean bool = false;
+            mResult.setWinOrLoseLabel(bool);
+            mResult.setGuessLabel(selectedWord, lastGuess);
         }
 
     }
-    
-//    public void endGame(int guessLimit) {
-//        if(currentRound == guessLimit) {
-//            mResult.unhidden();
-//        }
-//    }
     
     public String getCurrentGuess(){
         return currentGuess;
