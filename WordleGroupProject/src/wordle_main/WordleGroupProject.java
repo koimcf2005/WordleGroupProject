@@ -107,5 +107,12 @@ public class WordleGroupProject {
     private static int boolToInt(boolean bool) {
         return bool ? 1 : 0;
     }
- 
+
+    public static Window getWindow() {
+        return mWindow;
+    }
+    
+    public static void setWindow(Window window) {
+        mWindow = window;
+    }
 }
