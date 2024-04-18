@@ -21,7 +21,6 @@ import wordle_word_selection.WordSelection;
  * @author Kayla Dixon
  */
 public class GameResults extends JFrame implements ActionListener{
-    private Window mWindow = WordleGroupProject.mWindow;
     private static WordSelection mSelect;
     private static UserLetters mUserLetters;
             
@@ -152,34 +151,15 @@ public class GameResults extends JFrame implements ActionListener{
         setVisible(false);
     }
     
-    public void gameRestart() {
-        mWindow = new Window();
-        mWindow.createKeyboard();
-        
-        mWindow.createStartMenu();
-        mWindow.getStartMenu();
-
-        mWindow.getKeyboard().hide();
-        mWindow.getStartMenu().show();
-        
-        mSelect = new WordSelection();
-        mSelect.listExtraction();
-        mUserLetters = new UserLetters();
-    }
-    
     @Override
-    
     public void actionPerformed(ActionEvent a) {
         if(a.getSource() == replayButton) {
             hidden();
-            mWindow.dispose();
-            gameRestart();
+            WordleGroupProject.getWindow().dispose();
+            WordleGroupProject.gameRestart();
         }
         else if(a.getSource() == endGameButton) {
             System.exit(0);
         }
-    }
-    
-   
-    
+    } 
 }
