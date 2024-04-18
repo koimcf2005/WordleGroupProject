@@ -4,42 +4,40 @@
  */
 package wordle_gui;
 
+import java.awt.Color;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-//import java.awt.Color;
-//import java.awt.Font;
-//import javax.swing.BorderFactory;
-//import javax.swing.GroupLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-//import javax.swing.LayoutStyle;
-//import javax.swing.SwingConstants;
+import wordle_main.WordCheck;
 
 /**
  *
- * @author SavageGoddess
+ * @author Kayla Dixon
  */
-public class GameResults {
-    private final JFrame window;
+public class GameResults extends JFrame implements ActionListener{
+    private static WordCheck mResult;
     private final JButton endGameButton;
     private final JLabel guessLabel;
     private final JButton replayButton;
     private final JLabel userScore;
     private final JLabel winOrLose;
     
-    public GameResults (JFrame window, ActionListener listener) {
-        this.window = window;
+    public GameResults() {
+        mResult = new WordCheck();
         winOrLose = new javax.swing.JLabel();
         userScore = new javax.swing.JLabel();
         guessLabel = new javax.swing.JLabel();
         replayButton = new javax.swing.JButton();
         endGameButton = new javax.swing.JButton();
 
-        //setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        window.getContentPane().setBackground(new java.awt.Color(18, 18, 19));
-        window.setPreferredSize(new java.awt.Dimension(400, 340));
-        window.setResizable(false);
-        window.setType(java.awt.Window.Type.POPUP);
+        setSize(400, 340);
+        setResizable(false);
+        getContentPane().setBackground(new Color(18, 18, 19));
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+        setVisible(false);
 
         winOrLose.setFont(new java.awt.Font("Verdana", 0, 36)); // NOI18N
         winOrLose.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -64,8 +62,8 @@ public class GameResults {
         endGameButton.setForeground(new java.awt.Color(0, 102, 0));
         endGameButton.setText("End Game");
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(window.getContentPane());
-        window.getContentPane().setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -115,7 +113,12 @@ public class GameResults {
     }
     
     public void setWinOrLoseLabel() {
-        
+        if(mResult.getWin() == true) {
+            winOrLose.setText("You Win!");
+        }
+        else {
+            winOrLose.setText("You Lose!");
+        }
     }
     
     public void setUserScoreLabel() {
@@ -126,12 +129,27 @@ public class GameResults {
         
     }
     
-    public void popup() {
-        
+    @Override
+    
+    public void actionPerformed(ActionEvent e) {
+        if(mResult.getWin()== true) {
+            
+            System.out.println("you win");
+        }
+        else {
+            System.out.println("you lose");
+        }
+    }
+   
+    
+    public void unhidden() {
+        setVisible(true);
+        setAlwaysOnTop( true );
     }
     
-    public void hide() {
-        
+    
+    public void hidden() {
+        setVisible(false);
     }
     
 }

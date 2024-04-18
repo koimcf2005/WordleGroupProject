@@ -15,7 +15,6 @@ public class Window extends JFrame implements ActionListener {
     private Keyboard mKeyboard;
     private WordGrid mGrid; 
     private StartMenu mStartMenu;
-    private GameResults mResultMenu;
     
     // Constructor
     public Window() {
@@ -46,14 +45,9 @@ public class Window extends JFrame implements ActionListener {
         add(mGrid);
     }
     
-    public void createResultMenu() {
-        mResultMenu = new GameResults(this,this);
-    }
-    
     public Keyboard getKeyboard() { return mKeyboard; }
     public WordGrid getGrid() { return mGrid; }
     public StartMenu getStartMenu() { return mStartMenu; }
-    public GameResults getResultMenu() { return mResultMenu; }
     
     @Override
     // actionPerformed runs any time any button is pressed

@@ -6,7 +6,7 @@ package wordle_gui;
 
 /**
  *
- * @author SavageGoddess
+ * @author Kayla Dixon
  */
 public class EndGame extends javax.swing.JFrame {
 

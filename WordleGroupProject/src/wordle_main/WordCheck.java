@@ -1,5 +1,6 @@
 package wordle_main;
 
+import wordle_gui.GameResults;
 import wordle_gui.Window;
 
 /**
@@ -10,9 +11,10 @@ public class WordCheck {
    private static boolean hasWon = false;
     
     private static Window mWindow = WordleGroupProject.mWindow;
+    private static GameResults mResult;
 
     public static void checkGuess(String selectedWord, String guess, int guessCount) {
-        
+        mResult = new GameResults();
         String lowGuess = guess.toLowerCase();
         
         for (int i = 0; i < selectedWord.length(); i++) {
@@ -20,7 +22,7 @@ public class WordCheck {
                 mWindow.getGrid().getBox(guessCount, i).setAsWrongSpot();
 
                 if (lowGuess.charAt(i) == selectedWord.charAt(i)) {
-                    mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();   
+                    mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();
                 }
             } else {
                 mWindow.getGrid().getBox(guessCount, i).setAsIncorrectLetter();
@@ -29,7 +31,10 @@ public class WordCheck {
         }
         if(lowGuess.compareTo(selectedWord)== 0){
             hasWon = true;
+            mResult.unhidden();
+            
         }
+        mResult.unhidden();
     }
     
     public boolean getWin(){

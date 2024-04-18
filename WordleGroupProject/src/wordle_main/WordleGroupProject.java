@@ -2,6 +2,7 @@ package wordle_main;
 
 import wordle_word_selection.WordSelection;
 import javax.swing.JButton;
+import wordle_gui.GameResults;
 import wordle_gui.InputButton;
 import wordle_gui.Window;
 
@@ -15,6 +16,7 @@ import wordle_gui.Window;
 public class WordleGroupProject {
     // Object variables
     public static Window mWindow;
+    public static GameResults mResult;
     private static WordSelection mSelect;
     private static WordCheck mCheck;
     private static UserLetters mUserLetters;
@@ -64,11 +66,7 @@ public class WordleGroupProject {
         mSelect = new WordSelection();
         mSelect.listExtraction();
         mUserLetters = new UserLetters();
-        
-        if(mCheck.getWin()){
-            //mWindow.createResultMenu();
-            System.out.println("game win");
-        }
+       
     }
     
    /**
@@ -99,13 +97,6 @@ public class WordleGroupProject {
             mWindow.getStartMenu().hide();
             selectedWord = mSelect.randomWord(wordLength);
             System.out.println(selectedWord);
-            if(mCheck.getWin() == true){
-                //mWindow.createResultMenu();
-                System.out.println("game win");
-            }
-            else {
-                System.out.println("fail");
-            }
             
 //             mCheck.checkGuess(selectedWord, "black", 0);
         }
