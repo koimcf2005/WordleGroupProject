@@ -35,15 +35,15 @@ public class WordCheck {
             for (int i = 0; i < selectedWord.length(); i++) {
                 mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();
             }
-        } else {
+        } 
+        else {
             for (int i = 0; i < selectedWord.length(); i++) {
 
                 char currentLetter = lowGuess.charAt(i);
                 //System.out.println(currentLetter);
-                String checkGuess = lowGuess.replaceFirst(Character.toString(currentLetter), " ");
                 //System.out.println(checkGuess);
-                if (WordCheck.getCount(lowGuess, currentLetter) > 1) {
-                    //System.out.println(currentLetter + " appears twice!");
+                if ((WordCheck.getCount(lowGuess, currentLetter) > 1) && !(WordCheck.getCount(selectedWord, currentLetter) > 1) ){
+                    System.out.println(currentLetter + " appears twice!");
                     int secondLetter = lowGuess.replace(currentLetter, ' ').indexOf(Character.toString(currentLetter)) + 1;
                     StringBuilder modGuess = new StringBuilder(lowGuess);
                     modGuess.setCharAt(secondLetter, ' ');
@@ -64,9 +64,14 @@ public class WordCheck {
                     if (lowGuess.charAt(i) == selectedWord.charAt(i)) {
                         mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();
                     }
-                } else {
+                    mWindow.getKeyboard().getButtonByText(Character.toString(guess.charAt(i))).setAsNormal();
+                } 
+                
+                else {
                     mWindow.getGrid().getBox(guessCount, i).setAsIncorrectLetter();
-                    mWindow.getKeyboard().getButtonByText(Character.toString(guess.charAt(i))).setAsGrey();
+                    if(!(WordCheck.getCount(lowGuess, currentLetter) > 1)){
+                        mWindow.getKeyboard().getButtonByText(Character.toString(guess.charAt(i))).setAsGrey();
+                    }
                 }
             }
         }
