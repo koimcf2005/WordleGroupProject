@@ -61,7 +61,6 @@ albino
 albums
 alerts
 aliens
-alison
 allege
 alleys
 allied
@@ -79,13 +78,13 @@ amazed
 amazes
 amazon
 ambush
-amelia
 amends
 amidst
 amount
 amused
 analog
 anchor
+andrew
 anemia
 angels
 angled
@@ -182,7 +181,6 @@ azalea
 babies
 backed
 backup
-badass
 badger
 badges
 bagels
@@ -289,11 +287,9 @@ birdie
 births
 bishop
 bistro
-bitchy
 biting
 bitten
 bitter
-blacks
 blades
 blamed
 blames
@@ -374,7 +370,6 @@ brazen
 brazil
 breach
 breaks
-breast
 breath
 breeds
 breeze
@@ -473,7 +468,6 @@ canton
 cantor
 canvas
 canyon
-capcom
 capita
 capped
 carbon
@@ -481,9 +475,6 @@ cardio
 career
 carers
 caring
-carlin
-carmen
-carney
 carpet
 carrot
 cartel
@@ -495,7 +486,6 @@ cashed
 casing
 casino
 casket
-cassie
 caster
 castes
 castle
@@ -504,16 +494,13 @@ casual
 catchy
 caters
 cattle
-caucus
 caught
 causal
 caused
-causes
 caveat
 cavern
 caviar
 cavity
-cayman
 ceased
 ceases
 celebs
@@ -525,7 +512,6 @@ census
 center
 centre
 cereal
-cervix
 chains
 chairs
 chakra
@@ -549,19 +535,15 @@ cheers
 cheery
 cheese
 cheesy
-cheque
 cherry
 chests
 chewed
-chicks
 chiefs
-childs
 chilli
 chills
 chilly
 chimes
 choice
-choked
 choose
 choral
 chords
@@ -630,13 +612,11 @@ colder
 collar
 colony
 colors
-colour
 column
 combat
 comedy
 comets
 comics
-coming
 commit
 common
 compel
@@ -697,7 +677,6 @@ crafty
 cramps
 cranes
 cranky
-crappy
 crater
 crates
 craven
@@ -730,7 +709,6 @@ crumbs
 crunch
 crusty
 crying
-crypto
 cuckoo
 cuddle
 cuddly
@@ -738,8 +716,6 @@ curate
 curfew
 curing
 curled
-curran
-currie
 cursed
 curses
 cursor
@@ -756,10 +732,8 @@ cyclic
 cystic
 dagger
 dainty
-dalton
 damage
 dammit
-damned
 danced
 dancer
 dances
@@ -838,7 +812,6 @@ devour
 devout
 dexter
 dharma
-diablo
 dialed
 dialog
 diaper
@@ -990,7 +963,6 @@ equine
 equity
 erased
 eroded
-erotic
 errand
 errors
 escape
@@ -1080,7 +1052,6 @@ fences
 fender
 ferret
 fervor
-fetish
 feudal
 fewest
 fiance
@@ -1389,10 +1360,8 @@ hermit
 heroes
 heroic
 heroin
-herpes
 heyday
 hiatus
-hickey
 hidden
 hiding
 higher
@@ -1421,7 +1390,6 @@ honour
 hooded
 hoodie
 hooked
-hooker
 hookup
 hooper
 hooray
@@ -1517,7 +1485,6 @@ invoke
 inward
 iodine
 ironic
-isabel
 island
 issued
 issuer
@@ -1526,7 +1493,6 @@ itself
 jacked
 jacket
 jagged
-jagger
 jaguar
 jailed
 jammed
@@ -1541,7 +1507,6 @@ johnny
 joined
 joints
 joking
-joseph
 joyful
 joyous
 judged
@@ -1575,7 +1540,6 @@ kindly
 kissed
 kisses
 kitten
-knicks
 knight
 knives
 knocks
@@ -1586,8 +1550,6 @@ lacked
 ladder
 ladies
 lagoon
-laguna
-lakers
 lambda
 lament
 lancet
@@ -1645,8 +1607,6 @@ levers
 levied
 levies
 liable
-libido
-licked
 lifted
 ligand
 lights
@@ -1674,7 +1634,6 @@ lively
 livery
 living
 lizard
-lizzie
 loaded
 loader
 loaned
@@ -1848,7 +1807,6 @@ morals
 morbid
 morgan
 morgue
-morons
 morris
 morrow
 mortal
@@ -1925,7 +1883,6 @@ nights
 nimble
 ninety
 ninjas
-nipple
 nobles
 nobody
 nodded
@@ -1942,7 +1899,6 @@ novice
 nozzle
 nuance
 nuclei
-nudity
 nugget
 number
 nurses
@@ -1952,7 +1908,6 @@ object
 oblige
 obtain
 obtuse
-occult
 occupy
 occurs
 oceans
@@ -1988,7 +1943,6 @@ orchid
 ordeal
 orders
 organs
-orgasm
 orient
 origin
 ornate
@@ -2039,7 +1993,6 @@ parent
 parish
 parity
 parked
-parker
 parlor
 parody
 parole
@@ -2071,9 +2024,7 @@ peanut
 pearls
 pebble
 pedals
-peeing
 peeled
-pegged
 pellet
 pelvic
 pelvis
@@ -2124,7 +2075,6 @@ pixels
 pizzas
 placed
 places
-placid
 plague
 plains
 planar
@@ -2196,7 +2146,6 @@ pretty
 priced
 prices
 pricey
-pricks
 priest
 primal
 primed
@@ -2246,7 +2195,6 @@ pushes
 puzzle
 python
 quaint
-quaker
 quarry
 quartz
 queens
@@ -2263,10 +2211,7 @@ rabbit
 rabble
 rabies
 racers
-racial
 racing
-racism
-racist
 racked
 racket
 radial
@@ -2290,8 +2235,6 @@ ranges
 ranked
 ransom
 rapids
-raping
-rapist
 rapper
 raptor
 rarely
@@ -2395,7 +2338,6 @@ resume
 retail
 retain
 retake
-retard
 retina
 retire
 return
@@ -2548,7 +2490,6 @@ script
 scroll
 scrubs
 sealed
-seaman
 search
 season
 seated
@@ -2557,7 +2498,6 @@ second
 secret
 sector
 secure
-seduce
 seeded
 seeing
 seeker
@@ -2594,10 +2534,7 @@ severe
 sewage
 sewers
 sewing
-sexism
-sexist
 sexton
-sexual
 shabby
 shaded
 shades
@@ -2689,7 +2626,6 @@ skulls
 slalom
 slated
 slater
-slaves
 slayer
 sleazy
 sledge
@@ -2812,7 +2748,6 @@ square
 squash
 squats
 squire
-squirt
 stable
 stacks
 staffs
@@ -2844,10 +2779,8 @@ steady
 steaks
 steals
 steamy
-stella
 stench
 stereo
-steven
 sticks
 sticky
 stigma
@@ -2868,7 +2801,6 @@ stones
 stools
 stored
 stores
-storey
 storms
 stormy
 stoves
@@ -2914,7 +2846,6 @@ subtle
 subtly
 suburb
 subway
-sucked
 sucker
 sudden
 suffer
@@ -2942,7 +2873,6 @@ survey
 suture
 swamps
 swayed
-swears
 sweats
 sweaty
 swedes
@@ -2952,7 +2882,6 @@ swells
 swings
 switch
 swords
-sylvia
 symbol
 tables
 tablet
@@ -2966,7 +2895,6 @@ taking
 talent
 talked
 taller
-tamara
 tandem
 tangle
 tanker
@@ -2978,8 +2906,6 @@ target
 tariff
 tarmac
 tasked
-tasted
-tastes
 tattoo
 taught
 tavern
@@ -2989,7 +2915,6 @@ teased
 teaser
 techno
 teller
-tellin
 temper
 temple
 tenant
@@ -3011,7 +2936,6 @@ themed
 themes
 thence
 theory
-theres
 theses
 thesis
 thighs
@@ -3098,7 +3022,6 @@ trance
 trashy
 trauma
 travel
-travis
 treats
 treaty
 treble
@@ -3255,7 +3178,6 @@ viewer
 villas
 violet
 violin
-virgin
 virtue
 vision
 visits
@@ -3271,7 +3193,6 @@ voters
 voting
 vowels
 voyage
-vulgar
 wading
 waffle
 waging
@@ -3321,7 +3242,6 @@ wedges
 weekly
 weighs
 weight
-weiner
 weirdo
 welded
 whales
@@ -3332,7 +3252,6 @@ whisky
 whites
 wholly
 whoops
-whores
 wicked
 wicket
 widely
@@ -3343,7 +3262,6 @@ wiggle
 wilder
 wildly
 willed
-willie
 willow
 window
 winery

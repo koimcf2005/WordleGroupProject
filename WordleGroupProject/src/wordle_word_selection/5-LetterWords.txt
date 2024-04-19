@@ -179,7 +179,6 @@ baggy
 baked
 baker
 baler
-balls
 balmy
 banal
 banco
@@ -251,7 +250,6 @@ bible
 bicep
 biddy
 biggs
-bigot
 biker
 bikes
 bilge
@@ -265,13 +263,11 @@ birch
 birds
 birth
 bison
-bitch
 bites
 bitty
 black
 blade
 blame
-blanc
 bland
 blank
 blare
@@ -314,12 +310,10 @@ boils
 bolts
 bombs
 bonds
-boner
 bones
 boney
 bongo
 bonus
-boobs
 booby
 booed
 books
@@ -341,7 +335,6 @@ bound
 bouts
 bowed
 bowel
-bowie
 bowls
 boxed
 boxer
@@ -359,8 +352,6 @@ brawl
 brawn
 bread
 break
-breed
-brett
 briar
 bribe
 brick
@@ -373,7 +364,6 @@ brink
 briny
 brisk
 brits
-britt
 broad
 brock
 broil
@@ -419,7 +409,6 @@ busts
 busty
 butch
 butte
-butts
 buxom
 buyer
 bylaw
@@ -581,7 +570,6 @@ coach
 coast
 coats
 cobra
-cocks
 cocky
 cocoa
 coded
@@ -596,7 +584,6 @@ color
 colts
 combo
 combs
-comes
 comet
 comfy
 comic
@@ -630,13 +617,10 @@ cover
 covet
 covey
 covid
-cowan
 cower
 coyly
-crabs
 crack
 craft
-craig
 cramp
 crane
 crank
@@ -701,7 +685,6 @@ curse
 curve
 curvy
 cutie
-cyber
 cycle
 cynic
 daddy
@@ -711,8 +694,6 @@ daisy
 dally
 dance
 dandy
-darby
-darcy
 dared
 dares
 darts
@@ -761,10 +742,8 @@ devon
 diary
 diced
 dicey
-dicks
 diets
 digit
-dildo
 dilly
 dimly
 diner
@@ -919,14 +898,11 @@ epoxy
 equal
 equip
 erase
-erect
-erica
 erode
 error
 erupt
 essay
 ester
-ethel
 ether
 ethic
 ethos
@@ -957,23 +933,17 @@ fable
 faced
 faces
 facet
-facto
 facts
 faded
-fades
 fails
 faint
-fairs
 fairy
 faith
 faked
-fakes
-falls
 false
 famed
 fancy
 fangs
-fanny
 farce
 fared
 fares
@@ -982,15 +952,12 @@ farts
 fatal
 fated
 fates
-fatty
 fault
 fauna
 favor
 fears
 feast
 feats
-fecal
-feces
 feeds
 feels
 feign
@@ -1009,7 +976,6 @@ fetus
 fever
 fewer
 fiber
-fibre
 ficus
 field
 fiend
@@ -1096,7 +1062,6 @@ focal
 focus
 foggy
 foist
-folds
 folio
 folks
 folly
@@ -1282,8 +1247,6 @@ grimy
 grind
 gripe
 grips
-groan
-groin
 groom
 grope
 gross
@@ -1295,7 +1258,6 @@ grown
 grows
 gruel
 gruff
-grunt
 guard
 guava
 guess
@@ -1329,7 +1291,6 @@ hanks
 happy
 haram
 hardy
-harem
 harms
 harpy
 harry
@@ -1364,9 +1325,7 @@ hefty
 heirs
 heist
 helix
-hella
 hello
-hells
 helps
 hence
 henry
@@ -1403,7 +1362,6 @@ holly
 homer
 homes
 homie
-honda
 honed
 honey
 honor
@@ -1442,7 +1400,6 @@ hutch
 hydra
 hydro
 hyena
-hymen
 hymns
 hyped
 hyper
@@ -1532,6 +1489,7 @@ kappa
 kaput
 karma
 kayak
+kayla
 kebab
 keeps
 kelly
@@ -1639,7 +1597,6 @@ lewis
 liang
 liars
 libel
-licks
 liege
 lifts
 light
@@ -1691,10 +1648,8 @@ loose
 lorry
 loser
 loses
-lotta
 lotto
 lotus
-louie
 louse
 lousy
 loved
@@ -1835,14 +1790,12 @@ model
 modem
 modes
 mogul
-moira
 moist
 molar
 molds
 moldy
 moles
 molly
-momma
 mommy
 monde
 money
@@ -1856,7 +1809,6 @@ moors
 moose
 moral
 moray
-moron
 morph
 mossy
 motel
@@ -1864,8 +1816,6 @@ moths
 motif
 motor
 motto
-mould
-moult
 mound
 mount
 mourn
@@ -1924,7 +1874,6 @@ nexus
 nicer
 niche
 nicks
-nicky
 niece
 nifty
 night
@@ -1995,7 +1944,6 @@ outdo
 outer
 outgo
 outta
-ovary
 ovate
 ovens
 overs
@@ -2007,7 +1955,6 @@ owned
 owner
 oxide
 ozone
-pablo
 paced
 paces
 packs
@@ -2060,10 +2007,8 @@ pecan
 pedal
 peeps
 peers
-peggy
 penal
 pence
-penis
 penne
 penny
 perch
@@ -2147,7 +2092,6 @@ poles
 polio
 polka
 polls
-polly
 polyp
 ponds
 pooch
@@ -2179,13 +2123,11 @@ price
 prick
 pride
 pried
-prima
 prime
 primo
 print
 prior
 prism
-prius
 privy
 prize
 probe
@@ -2265,9 +2207,7 @@ rainy
 raise
 rajah
 rally
-ralph
 ramen
-ramon
 ramps
 ranch
 randy
@@ -2275,7 +2215,6 @@ range
 ranks
 rants
 raped
-rapes
 rapid
 rarer
 raspy
@@ -2392,10 +2331,8 @@ rowan
 rowdy
 rower
 royal
-rubin
 ruddy
 ruder
-rufus
 rugby
 ruins
 ruled
@@ -2495,7 +2432,6 @@ segue
 seine
 seize
 sells
-semen
 semis
 sends
 sense
@@ -2508,7 +2444,6 @@ setup
 seven
 sever
 sewer
-sexes
 shack
 shade
 shady
@@ -2588,7 +2523,6 @@ sings
 sinks
 sinus
 siren
-sissy
 sites
 sixth
 sixty
@@ -2608,7 +2542,6 @@ skull
 skunk
 slabs
 slack
-slade
 slain
 slams
 slang
@@ -2622,7 +2555,6 @@ sleep
 sleet
 slept
 slice
-slick
 slide
 slime
 slimy
@@ -2834,7 +2766,6 @@ stunk
 stunt
 style
 suave
-sucks
 suede
 sugar
 suing
@@ -2849,7 +2780,6 @@ supra
 surer
 surge
 surly
-susan
 sushi
 swami
 swamp
@@ -2877,7 +2807,6 @@ swoon
 swoop
 tabby
 table
-taboo
 tacit
 tacky
 tacos
@@ -2898,7 +2827,6 @@ tammy
 tango
 tangy
 tanks
-tanya
 taped
 taper
 tapes
@@ -2992,7 +2920,6 @@ tires
 titan
 tithe
 title
-titty
 toast
 today
 toddy
@@ -3033,7 +2960,6 @@ train
 trait
 tramp
 trams
-trans
 traps
 trash
 trawl
@@ -3127,7 +3053,6 @@ upset
 urban
 urged
 urges
-urine
 usage
 users
 usher
@@ -3177,7 +3102,6 @@ visit
 visor
 vista
 vital
-vitro
 vivid
 vixen
 vocal
@@ -3240,7 +3164,6 @@ weird
 welch
 wells
 welsh
-wench
 whack
 whale
 wharf
@@ -3260,7 +3183,6 @@ whisk
 white
 whole
 whoop
-whore
 whose
 widen
 wider
@@ -3325,7 +3247,6 @@ yacht
 yahoo
 yanks
 yards
-yates
 yearn
 years
 yeast
@@ -3337,8 +3258,6 @@ yours
 youth
 yummy
 zebra
-zeros
 zesty
 zonal
 zoned
-zones
