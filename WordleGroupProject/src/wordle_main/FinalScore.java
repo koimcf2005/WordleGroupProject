@@ -1,15 +1,17 @@
 package wordle_main;
 
 /**
- * @author Kayla Dixon
+ * @author Kayla
  */
 public class FinalScore {
     private String label;
     private UserLetters mUserLetters;
     
+    //sets the string for how well the player did based on their final score
     public String displayFinalScore(){
         mUserLetters = new UserLetters();
                 
+        //checks if the player won or not first
         if(WordCheck.getWin() == true) {
             int finalRound = mUserLetters.getCurrentRound() + 1;
             switch(finalRound) {

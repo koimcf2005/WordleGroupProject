@@ -31,7 +31,7 @@ public class WordCheck {
             hasWon = true;
             mResult.unhidden();
             mResult.setWinOrLoseLabel(hasWon);
-            mResult.setGuessLabel(selectedWord, guess);
+            mResult.setGuessLabel(selectedWord);
             for (int i = 0; i < selectedWord.length(); i++) {
                 mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();
             }

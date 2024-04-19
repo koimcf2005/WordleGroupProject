@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
 /**
- * @author koimc
+ * @author Koi
  */
 public class LetterBox extends JPanel {
     private JLabel letterLabel;

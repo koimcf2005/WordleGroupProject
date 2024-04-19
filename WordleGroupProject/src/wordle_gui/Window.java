@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 import wordle_main.WordleGroupProject;
 
 /**
- * @author koimc
+ * @author Koi
  */
 public class Window extends JFrame implements ActionListener {
         

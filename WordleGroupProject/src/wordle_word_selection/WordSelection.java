@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
-  * @author Kayla Dixon
+  * @author Kayla
  */
 public class WordSelection {
     //word list initialization
@@ -17,6 +17,7 @@ public class WordSelection {
     List<String> sixLetterWords = new ArrayList<>();
     List<String> sevenLetterWords = new ArrayList<>();
         
+    //creates the lists of words from each file
     public void listExtraction() {
         FileInputStream fileInStream1;
         FileInputStream fileInStream2;
@@ -92,6 +93,7 @@ public class WordSelection {
         //}
     }
     
+    //generates a random word based on the amount of letter the user wants
     public String randomWord(int wordList) {
         String currentWord = "Not working";
         

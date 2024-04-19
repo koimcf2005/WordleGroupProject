@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 /**
- * @author koimc
+ * @author Koi
  */
 public class WordGrid extends JPanel {
     

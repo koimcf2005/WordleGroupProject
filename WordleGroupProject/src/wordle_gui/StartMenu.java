@@ -12,7 +12,7 @@ import javax.swing.LayoutStyle;
 import javax.swing.SwingConstants;
 
 /**
- * @author koimc
+ * @author Koi
  */
 public class StartMenu {
     private final JFrame window;

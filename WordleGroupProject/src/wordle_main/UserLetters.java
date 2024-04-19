@@ -53,7 +53,7 @@ public class UserLetters {
             mResult.unhidden();
             boolean bool = false;
             mResult.setWinOrLoseLabel(bool);
-            mResult.setGuessLabel(selectedWord, lastGuess);
+            mResult.setGuessLabel(selectedWord);
         }
 
     }

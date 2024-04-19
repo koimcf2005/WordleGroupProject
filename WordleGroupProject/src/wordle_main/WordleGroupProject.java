@@ -2,7 +2,6 @@ package wordle_main;
 
 import wordle_word_selection.WordSelection;
 import javax.swing.JButton;
-import wordle_gui.GameResults;
 import wordle_gui.InputButton;
 import wordle_gui.Window;
 

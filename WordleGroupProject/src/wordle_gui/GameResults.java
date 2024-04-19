@@ -12,7 +12,7 @@ import wordle_main.WordleGroupProject;
 
 /**
  *
- * @author Kayla Dixon
+ * @author Kayla
  */
 public class GameResults extends JFrame implements ActionListener{
     private static FinalScore mFinal;
@@ -22,6 +22,7 @@ public class GameResults extends JFrame implements ActionListener{
     private final JLabel userScore;
     private final JLabel winOrLose;
     
+    //gui generation for the end game screen
     public GameResults() {
         winOrLose = new javax.swing.JLabel();
         userScore = new javax.swing.JLabel();
@@ -122,6 +123,7 @@ public class GameResults extends JFrame implements ActionListener{
         return endGameButton;
     }
     
+    //changes the label for if they win or lose
     public void setWinOrLoseLabel(boolean win) {
         if(win == true) {
             winOrLose.setText("You Win!");
@@ -133,10 +135,12 @@ public class GameResults extends JFrame implements ActionListener{
         
     }
     
-    public void setGuessLabel(String answer, String guess) {
+    //Shows the answer
+    public void setGuessLabel(String answer) {
         guessLabel.setText("The word was " + answer.toUpperCase());
     }
     
+    //shows the final score string and makes the end game button visible
     public void unhidden() {
         String line;
         
@@ -149,11 +153,13 @@ public class GameResults extends JFrame implements ActionListener{
     }
     
     
+    //hides the end game button
     public void hidden() {
         setVisible(false);
     }
     
     @Override
+    //ends the game or restarts it based on what the player presses
     public void actionPerformed(ActionEvent a) {
         if(a.getSource() == replayButton) {
             hidden();

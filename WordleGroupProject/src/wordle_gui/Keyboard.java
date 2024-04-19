@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import javax.swing.JFrame;
 
 /**
- * @author koimc
+ * @author Koi
  */
 public class Keyboard {
     private final JFrame window;

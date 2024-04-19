@@ -7,7 +7,7 @@ import javax.swing.JButton;
 
 /**
  * This is a class for a basic button (Will mostly be used for the keyboard)
- * @author koimc
+ * @author Koi
  */
 public class InputButton extends JButton {
     
