@@ -50,10 +50,7 @@ public class UserLetters {
             lastGuess = currentGuess;
         }
         if(currentRound == guessLimit) {
-            mResult.unhidden();
-            boolean bool = false;
-            mResult.setWinOrLoseLabel(bool);
-            mResult.setGuessLabel(selectedWord);
+            mResult.unhidden(selectedWord);
         }
 
     }

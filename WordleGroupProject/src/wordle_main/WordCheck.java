@@ -41,9 +41,7 @@ public class WordCheck {
         //Checks for a correct guess and triggers a win
         if (lowGuess.compareTo(selectedWord) == 0) {
             hasWon = true;
-            mResult.unhidden();
-            mResult.setWinOrLoseLabel(hasWon);
-            mResult.setGuessLabel(selectedWord);
+            mResult.unhidden(selectedWord);
             for (int i = 0; i < selectedWord.length(); i++) {
                 mWindow.getGrid().getBox(guessCount, i).setAsCorrectLetter();
             }

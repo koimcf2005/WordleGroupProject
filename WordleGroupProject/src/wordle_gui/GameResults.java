@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import wordle_main.FinalScore;
+import wordle_main.WordCheck;
 import wordle_main.WordleGroupProject;
 
 
@@ -16,6 +17,7 @@ import wordle_main.WordleGroupProject;
  */
 public class GameResults extends JFrame implements ActionListener{
     private static FinalScore mFinal;
+    private static WordCheck mCheck;
     private final JButton endGameButton;
     private final JLabel guessLabel;
     private final JButton replayButton;
@@ -30,6 +32,7 @@ public class GameResults extends JFrame implements ActionListener{
         replayButton = new javax.swing.JButton();
         endGameButton = new javax.swing.JButton();
         mFinal = new FinalScore();
+        mCheck = new WordCheck();
         
         replayButton.addActionListener(this);
         endGameButton.addActionListener(this);
@@ -141,12 +144,15 @@ public class GameResults extends JFrame implements ActionListener{
     }
     
     //shows the final score string and makes the end game button visible
-    public void unhidden() {
+    public void unhidden(String selectedWord) {
         String line;
         
         line = mFinal.displayFinalScore();
         
         userScore.setText(line);
+        
+        setWinOrLoseLabel(mCheck.getWin());
+        setGuessLabel(selectedWord);
         
         setVisible(true);
         setAlwaysOnTop( true );
