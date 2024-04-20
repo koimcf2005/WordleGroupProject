@@ -17,11 +17,13 @@ public class UserLetters {
     public static int currentRound = 0;
 
     public void getKeyboardInput(InputButton key, String selectedWord, int guessLimit) {
+        //Breaks from function when game is won
         if (WordCheck.getWin() == true)
             return;
         
         mResult = new GameResults();
         switch (key.getLetter()) {
+            //Submits a guess and only works when there are enough letters
             case ' ' -> { // Enter key
                 if (currentGuess.length() == selectedWord.length()) {
                     System.out.println(currentGuess);
@@ -30,6 +32,7 @@ public class UserLetters {
                     currentGuess = "";
                 }
             }
+            //Simply deletes the prior character from the current guess being made
             case '\b' -> { // Delete key
 
                 try {
@@ -39,6 +42,7 @@ public class UserLetters {
                     currentGuess = "";
                 }
             }
+            //Store the letter in the string for the current guess and displays it 
             default -> { // Letter key
                 if (currentGuess.length() < selectedWord.length()) {
                     currentGuess += key.getLetter();
@@ -46,6 +50,7 @@ public class UserLetters {
                 }
             }
         }
+        //Stores final guess for output in results and then displays results
         if(currentRound == guessLimit - 1) {
             lastGuess = currentGuess;
         }
@@ -55,7 +60,7 @@ public class UserLetters {
 
     }
     
-    
+    //Allows the user to play another round after either winning or losing 
     public void reset() {
         mWindow = WordleGroupProject.getWindow();
         currentGuess = "";
@@ -65,6 +70,7 @@ public class UserLetters {
         WordCheck.setWindow(WordleGroupProject.getWindow());
     }
     
+    //Getters for guess and round
     public String getCurrentGuess(){
         return currentGuess;
     }
